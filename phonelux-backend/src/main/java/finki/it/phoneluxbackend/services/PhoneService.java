@@ -20,11 +20,4 @@ public class PhoneService {
         return phoneRepository.findAll();
     }
 
-    public List<PhoneOffer> getOffersForPhone(Long phoneId) {
-        boolean exists = phoneRepository.existsById(phoneId);
-        if(!exists)
-            throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
-
-        return phoneRepository.findById(phoneId).get().getPhoneOffers();
-    }
 }

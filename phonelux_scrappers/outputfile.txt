@@ -1,767 +1,638 @@
-page: 1
-Alcatel 1066G Black
-Alcatel
-
-
-Alcatel 1066D Dual-Sim Black
-Alcatel
-
-
-Alcatel 1066D Dual-Sim White
-Alcatel
-
-
-Mobile Phone MeanIT F26 Red
-MeanIT
-
-
-Mobile Phone MeanIT F26 Black
-MeanIT
-
-
-Mobile Phone MeanIT Veteran I White
-MeanIT
-
-
-Nokia 105 2019 Dual-Sim Black
-Nokia
-
-
-Mobile Phone MeanIT Veteran I Red
-MeanIT
-
-
-Mobile Phone MeanIT Veteran I Black
-MeanIT
-
-
-Mobile Phone Trevi MAX 10 Silver
-Trevi
-
-
-Mobile Phone Trevi MAX 10 Black
-Trevi
-
-
-Mobile Phone Denver B183 Black
-Denver
-
-
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
-page: 1
+(3, 'Honor', 'Honor 50', None)
+https://admin.ledikom.mk/uploads/items/1500/1649755126honor-50-1-250x300-pad.jpg?v=1
+(4, 'Xiaomi', 'Xiaomi Redmi Note 10', None)
+https://setec.mk/image/cache/catalog/Product/74172_0-228x228.jpg
+(5, 'Apple', 'Apple iPhone 13', None)
+https://admin.ledikom.mk/uploads/items/412/1641670848apple-iphone-13-1-250x300-pad.jpg?v=1
+(6, 'Apple', 'Apple iPhone 13 Pro', None)
+https://admin.ledikom.mk/uploads/items/413/1641671221apple-iphone-13-pro-1-250x300-pad.jpg?v=1
+(7, 'Apple', 'Apple iPhone 13 Pro Max', None)
+https://admin.ledikom.mk/uploads/items/411/1641668143apple-iphone-13-pro-max-1-250x300-pad.jpg?v=1
+(8, 'Apple', 'Apple iPhone 12', None)
+https://admin.ledikom.mk/uploads/items/342/1641664916apple-iphone-12-1-250x300-pad.jpg?v=1
+(9, 'Apple', 'Apple iPhone 11', None)
+https://admin.ledikom.mk/uploads/items/192/1641654006apple-iphone-11-1-250x300-pad.jpg?v=1
+(10, 'Apple', 'Apple iPhone XR', 'null')
+https://mobitech.mk/wp-content/uploads/2022/01/apple-iphone-xr-new.jpg
+(12, 'Samsung', 'Samsung Galaxy A32', None)
+https://admin.ledikom.mk/uploads/items/372/1642792043samsung-galaxy-a32-1-250x300-pad.jpg?v=1
+(13, 'Honor', 'Honor 50 Lite', None)
+https://admin.ledikom.mk/uploads/items/1501/1649755462honor-50-lite-1-250x300-pad.jpg?v=1
+(14, 'Apple', 'Apple iPhone 7', None)
+https://mobitech.mk/wp-content/uploads/2021/12/apple-iphone-7r4-1.jpg
+(15, 'Apple', 'Apple iPhone X', None)
+https://mobitech.mk/wp-content/uploads/2021/12/apple-iphone-x-1.jpg
+(16, 'Apple', 'Apple iPhone XS', None)
+https://mobitech.mk/wp-content/uploads/2021/12/apple-iphone-xs-new.jpg
+(18, 'Nokia', 'Nokia 105 (2017)', None)
+https://admin.ledikom.mk/uploads/items/83/1653051611nokia-105-2017-duos-1-250x300-pad.jpg?v=1
+(19, 'Samsung', 'Samsung Galaxy S22 5G', None)
+https://admin.ledikom.mk/uploads/items/1478/1647544681samsung-galaxy-s22-5g-1-250x300-pad.jpg?v=1
+(20, 'Samsung', 'Samsung Galaxy A22 5G', None)
+https://admin.ledikom.mk/uploads/items/392/1642792789samsung-galaxy-a22-5g-1-250x300-pad.jpg?v=1
+(21, 'Samsung', 'Samsung Galaxy A33 5G', None)
+https://admin.ledikom.mk/uploads/items/1563/1651071492samsung-galaxy-a33-5g-1-250x300-pad.jpg?v=1
+(22, 'Samsung', 'Samsung Galaxy A03', None)
+https://www.neptun.mk/2022/04/07/23_e3fe9e55-914d-4ac3-89af-8aea5e659341.JPG?width=192
+(23, 'Samsung', 'Samsung Galaxy A13', None)
+https://admin.ledikom.mk/uploads/items/1497/1649754127samsung-galaxy-a13-1-250x300-pad.jpg?v=1
+(24, 'Apple', 'Apple iPhone SE', None)
+https://mobelix.com.mk/storage/app/uploads/public/5eb/2bf/b67/thumb_2064_550_800_0_0_crop.jpg
+(25, 'Xiaomi', 'Xiaomi Redmi 10', None)
+https://admin.ledikom.mk/uploads/items/3036/1655459489xiaomi-redmi-10-1-250x300-pad.jpg?v=1
+(26, 'Samsung', 'Samsung Galaxy A53 5G', None)
+https://admin.ledikom.mk/uploads/items/1499/1649754737samsung-galaxy-a53-5g-1-250x300-pad.jpg?v=1
+(27, 'Motorola', 'Motorola Moto E7 Power', None)
+https://www.neptun.mk/2021/10/09/15571370a_e41b8951-dd67-4951-a899-104b37ff4f9d.jpg?width=192
+(28, 'Samsung', 'Samsung Galaxy S21+ 5G', None)
+https://admin.ledikom.mk/uploads/items/344/1642708501samsung-galaxy-s21-5g-1-250x300-pad.jpg?v=1
+(30, 'Huawei', 'Huawei nova 9', None)
+https://mobigo.mk/wp-content/uploads/2021/12/huawei-nova-9-5g.jpg
+(32, 'Samsung', 'Samsung Galaxy A03s', None)
+https://admin.ledikom.mk/uploads/items/406/1642794048samsung-a03s-1-250x300-pad.jpg?v=1
+(34, 'Xiaomi', 'Xiaomi Redmi Note 10 Pro', None)
+https://mobigo.mk/wp-content/uploads/2021/07/xiaomi-redmi-note10-pro.jpg
+(35, 'Xiaomi', 'Xiaomi Mi 10T Pro 5G', None)
+https://mobigo.mk/wp-content/uploads/2021/01/xiaomi-mi-10t-5g-pro.jpg
+(37, 'Xiaomi', 'Xiaomi Poco X3 Pro', None)
+https://www.a1.mk/documents/20126/2021612/POCO_X3_Pro.png
+(38, 'Samsung', 'Samsung Galaxy A02s', None)
+https://admin.ledikom.mk/uploads/items/340/1642705059samsung-galaxy-a02s-1-250x300-pad.jpg?v=1
+(40, 'Xiaomi', 'Xiaomi Mi 10T Lite 5G', None)
+https://admin.ledikom.mk/uploads/items/390/mi10tlite5g-978742-250x300-pad.jpg?v=1
+(41, 'Samsung', 'Samsung Galaxy A10s', None)
+https://mobigo.mk/wp-content/uploads/2020/07/samsung-galaxy-a10s.jpg
+(42, 'Xiaomi', 'Xiaomi Redmi Note 9S', None)
+https://setec.mk/image/cache/catalog/Product/73862_0-228x228.jpg
+(43, 'Nokia', 'Nokia 3310', None)
+https://admin.ledikom.mk/uploads/items/351/1653051682nokia-3310-2017-1-250x300-pad.jpg?v=1
+(44, 'Huawei', 'Huawei P30 Pro', None)
+https://mobigo.mk/wp-content/uploads/2019/07/huawei-p30-pro.jpg
+(45, 'Huawei', 'Huawei Mate 20 Pro', None)
+https://mobigo.mk/wp-content/uploads/2019/02/huawei-mate-20-pro-1.jpg
+(46, 'Samsung', 'Samsung Galaxy A72', None)
+https://admin.ledikom.mk/uploads/items/364/1642789715samsung-galaxy-a72-1-250x300-pad.jpg?v=1
+(47, 'Samsung', 'Samsung Galaxy F62', None)
+https://mobelix.com.mk/storage/app/uploads/public/605/319/381/thumb_2496_550_800_0_0_crop.jpg
+(48, 'Blackberry', 'Blackberry Porsche Design P9981', None)
+https://mobelix.com.mk/storage/app/uploads/public/605/31a/2d7/thumb_2499_550_800_0_0_crop.jpg
+(54, 'Samsung', 'Samsung Galaxy S20 FE 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/622/360/d34/thumb_3692_550_800_0_0_crop.png
+(55, 'Asus', 'Asus ROG Phone 3', None)
+https://mobelix.com.mk/storage/app/uploads/public/5f8/037/ce9/thumb_2308_550_800_0_0_crop.png
+(56, 'Xiaomi', 'Xiaomi Mi 10 Lite 5G', None)
+https://admin.ledikom.mk/uploads/items/395/mi10lite5g-836560-250x300-pad.jpg?v=1
+(57, 'Huawei', 'Huawei P40 Lite E', None)
+https://mobelix.com.mk/storage/app/uploads/public/5f2/bc0/63d/thumb_2194_550_800_0_0_crop.jpg
+(58, 'OnePlus', 'OnePlus 7T Pro McLaren Edition', None)
+https://mobelix.com.mk/storage/app/uploads/public/5dd/3c7/29c/thumb_1944_550_800_0_0_crop.jpg
+(59, 'OnePlus', 'OnePlus 7T', None)
+https://mobelix.com.mk/storage/app/uploads/public/623/876/e71/thumb_3713_550_800_0_0_crop.png
+(61, 'Oppo', 'Oppo A9', None)
+https://mobelix.com.mk/storage/app/uploads/public/5de/4e7/f26/thumb_1978_550_800_0_0_crop.jpg
+(62, 'Asus', 'Asus ROG Phone 2', None)
+https://mobelix.com.mk/storage/app/uploads/public/5e5/3c4/5e6/thumb_2034_550_800_0_0_crop.png
+(63, 'Oppo', 'Oppo F11 Pro', None)
+https://mobelix.com.mk/storage/app/uploads/public/5de/4e7/49d/thumb_1976_550_800_0_0_crop.jpg
+(64, 'Honor', 'Honor View 20', None)
+https://mobelix.com.mk/storage/app/uploads/public/5c9/0dc/413/thumb_1773_550_800_0_0_crop.jpg
+(65, 'Huawei', 'Huawei Y Max', None)
+https://mobelix.com.mk/storage/app/uploads/public/5cd/053/0ab/thumb_1811_550_800_0_0_crop.jpg
+(68, 'Nokia', 'Nokia 8110 4G', None)
+https://mobelix.com.mk/storage/app/uploads/public/5bc/877/975/thumb_686_550_800_0_0_crop.jpg
+(69, 'Nokia', 'Nokia 6310', None)
+https://admin.ledikom.mk/uploads/items/436/1653051842nokia-6310-2021-1-250x300-pad.jpg?v=1
+(70, 'Xiaomi', 'Xiaomi Poco X3', None)
+https://admin.ledikom.mk/uploads/items/315/1644588871xiaomi-poco-x3-nfc-1-250x300-pad.jpg?v=1
+(71, 'Xiaomi', 'Xiaomi Mi 10T 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/5fd/343/c47/thumb_2416_550_800_0_0_crop.jpg
+(73, 'Samsung', 'Samsung Galaxy A12', None)
+https://www.neptun.mk/2022/01/13/1150569a91-b4ec-4484-a977-da071903f48b_37266053-7f21-42d2-bde9-ebb29a1220c6.jpg?width=192
+(74, 'Xiaomi', 'Xiaomi Poco M3', None)
+https://mobelix.com.mk/storage/app/uploads/public/5ff/f06/b11/thumb_2451_550_800_0_0_crop.png
+(75, 'Samsung', 'Samsung Galaxy S21 5G', None)
+https://admin.ledikom.mk/uploads/items/345/1642711031samsung-galaxy-s21-5g-1-250x300-pad.jpg?v=1
+(76, 'Asus', 'Asus ROG Phone 5', None)
+https://admin.ledikom.mk/uploads/items/362/1653383457asus-rog-phone-5-1-250x300-pad.jpg?v=1
+(77, 'Samsung', 'Samsung Galaxy S21 Ultra 5G', None)
+https://admin.ledikom.mk/uploads/items/343/1642708100samsung-galaxy-s21-ultra-5g-1-250x300-pad.jpg?v=1
+(79, 'Xiaomi', 'Xiaomi Redmi Note 9T 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/606/eff/40a/thumb_2684_550_800_0_0_crop.png
+(80, 'OnePlus', 'OnePlus 9', None)
+https://mobelix.com.mk/storage/app/uploads/public/609/2af/b4b/thumb_3135_550_800_0_0_crop.png
+(81, 'OnePlus', 'OnePlus 9 Pro', None)
+https://mobelix.com.mk/storage/app/uploads/public/609/2af/c8d/thumb_3137_550_800_0_0_crop.png
+(82, 'Samsung', 'Samsung Galaxy A52', None)
+https://admin.ledikom.mk/uploads/items/359/1642789645samsung-galaxy-a52-1-250x300-pad.jpg?v=1
+(83, 'Xiaomi', 'Xiaomi Redmi Note 10 Pro Max', None)
+https://admin.ledikom.mk/uploads/items/379/1653381685xiaomi-redmi-note-10-pro-max-1-250x300-pad.jpg?v=1
+(85, 'Xiaomi', 'Xiaomi Mi 11 Lite 5G NE', None)
+https://setec.mk/image/cache/catalog/Product/60645_0-228x228.jpg
+(86, 'Samsung', 'Samsung Galaxy M02s', None)
+https://admin.ledikom.mk/uploads/items/354/1642788228samsung-galaxy-m02s-1-250x300-pad.jpg?v=1
+(87, 'OnePlus', 'OnePlus 9R', None)
+https://mobelix.com.mk/storage/app/uploads/public/60d/ed0/0f3/thumb_3191_550_800_0_0_crop.png
+(88, 'Samsung', 'Samsung Galaxy M12', None)
+https://mobelix.com.mk/storage/app/uploads/public/60d/eef/d6a/thumb_3193_550_800_0_0_crop.png
+(89, 'Xiaomi', 'Xiaomi Mi 11 Ultra', None)
+https://admin.ledikom.mk/uploads/items/398/1651156416xiaomi-mi-11-ultra-1-250x300-pad.jpg?v=1
+(90, 'Xiaomi', 'Xiaomi Poco F3', None)
+https://www.neptun.mk/2021/05/18/22222_28c3ee3c-d029-4ccd-a5a6-64aa1ab03fb2.jpg?width=192
+(91, 'Xiaomi', 'Xiaomi Redmi 8A', None)
+https://mobelix.com.mk/storage/app/uploads/public/5ee/0f2/e81/thumb_2131_550_800_0_0_crop.png
+(92, 'Samsung', 'Samsung Galaxy A01', None)
+None
+(98, 'Honor', 'Honor X7', None)
+https://www.a1.mk/documents/20126/2346005/Honor-X7-Front.png
+(102, 'Huawei', 'Huawei Nova 9 SE', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/22032022111538download(1).jpg
+(104, 'Motorola', 'Motorola E7 Power', None)
+None
+(106, 'Xiaomi', 'Xiaomi Redmi Note 11', None)
+https://www.neptun.mk/2022/02/22/xiaomiredminote11azulestelar01l_367116a3-c5cb-46a0-af2b-b97401a4155f.jpg?width=192
+(119, 'Apple', 'Apple iPhone XS Max', None)
+https://mobitech.mk/wp-content/uploads/2021/12/apple-iphone-xs-max-new1.jpg
+(125, 'Samsung', 'Samsung Galaxy A23', None)
+https://admin.ledikom.mk/uploads/items/1498/1649754304samsung-galaxy-a23-1-250x300-pad.jpg?v=1
+(126, 'Samsung', 'Samsung Galaxy A02', None)
+https://admin.ledikom.mk/uploads/items/352/1642711564samsung-galaxy-a02-1-250x300-pad.jpg?v=1
+(129, 'Apple', 'Apple iPhone 12 Pro', None)
+https://i2.wp.com/mobilezone.mk/wp-content/uploads/2021/08/12-pro-blue.png?resize=512%2C600&ssl=1
+(140, 'Nokia', 'Nokia C21', None)
+https://www.a1.mk/documents/20126/2336887/Nokia+C21_Front_Blue.png
+(153, 'Apple', 'Apple iPhone 13 Mini', None)
+https://admin.ledikom.mk/uploads/items/429/1641673183apple-iphone-13-mini-1-250x300-pad.jpg?v=1
+(156, 'Samsung', 'Samsung Galaxy S21 FE 5G', None)
+https://admin.ledikom.mk/uploads/items/1477/1647544699samsung-galaxy-s21-fe-5g-1-250x300-pad.jpg?v=1
+(159, 'Xiaomi', 'Xiaomi 11Т Pro 5G', None)
+None
+(161, 'Xiaomi', 'P40 lite E', None)
+None
+(173, 'Honor', 'Honor X8', None)
+https://www.a1.mk/documents/20126/2315371/Honor-8X-2022-Front-Blue.png
+(184, 'Wiko', 'Wiko View', None)
+https://akcija.com.mk/app/img/products/gallery/2021/07/WIKVIEWBLAST_Wiko_View_4G_Black_32_+_3.webp
+(194, 'Google', 'Google Pixel 6', None)
+https://admin.ledikom.mk/uploads/items/1502/1649758047google-pixel-6-1-250x300-pad.jpg?v=1
+(195, 'Xiaomi', 'Xiaomi Poco X3 GT', None)
+https://mobelix.com.mk/storage/app/uploads/public/612/e29/ab9/thumb_3301_550_800_0_0_crop.png
+(196, 'Samsung', 'Samsung Galaxy Z Fold 3 5G', None)
+https://admin.ledikom.mk/uploads/items/408/galaxyzfold35g-874417-250x300-pad.jpg?v=1
+(199, 'Xiaomi ', 'Xiaomi Mi 11T Pro 5G', None)
+https://www.neptun.mk/2021/11/10/xiaomi11tproblancomedianoche04adl_dcdba358-c8be-4ed6-ada5-0dac8dd6a314.jpg?width=192
+(200, 'Samsung', 'Samsung Galaxy F12', None)
+https://mobelix.com.mk/storage/app/uploads/public/618/11f/35e/thumb_3446_550_800_0_0_crop.png
+(201, 'A1', 'A1 Alpha 21', None)
+https://www.a1.mk/documents/20126/1900464/A1-Alpha-21.png
+(202, 'Motorola', 'Motorola G60', None)
+https://www.a1.mk/documents/20126/2152486/Motorola-MOTO-G60-Front.png
+(203, 'Google', 'Google Pixel 6 Pro', None)
+https://admin.ledikom.mk/uploads/items/1503/1649766652google-pixel-6-pro-1-250x300-pad.jpg?v=1
+(204, 'Xiaomi', 'Xiaomi Redmi Note 10T 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/61a/0c6/65d/thumb_3478_550_800_0_0_crop.png
+(205, 'Samsung', 'Samsung Galaxy A52s', None)
+https://www.neptun.mk/2021/09/02/720_c7b32e05-41eb-47c4-b2e6-64b19d789d54.jpg?width=192
+(206, 'Xiaomi', 'Xiaomi Redmi Note 11T 5G', None)
+https://admin.ledikom.mk/uploads/items/1485/1649682740xiaomi-redmi-note-11t-5g-1-250x300-pad.jpg?v=1
+(207, 'Xiaomi', 'Xiaomi Poco M3 Pro 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/61f/26c/5d9/thumb_3564_550_800_0_0_crop.png
+(208, 'OnePlus', 'OnePlus 8 Pro', None)
+https://mobelix.com.mk/storage/app/uploads/public/5eb/2cd/447/thumb_2075_550_800_0_0_crop.png
+(209, 'Nokia', 'Nokia G10', None)
+https://www.a1.mk/documents/20126/1862420/Nokia-G10.png
+(210, 'Samsung', 'Samsung Galaxy Note 20', None)
+https://admin.ledikom.mk/uploads/items/299/1642704279samsung-galaxy-note20-1-250x300-pad.jpg?v=1
+(211, 'Samsung', 'Samsung Galaxy Note 20 Ultra 5G', None)
+https://admin.ledikom.mk/uploads/items/341/1642707896samsung-galaxy-note20-ultra-5g-1-250x300-pad.jpg?v=1
+(214, 'Huawei', 'Huawei P50 Pocket', None)
+https://mobelix.com.mk/storage/app/uploads/public/621/a31/b32/thumb_3662_550_800_0_0_crop.png
+(215, 'Xiaomi', 'Xiaomi Mi 11T 5G', None)
+https://www.neptun.mk/2022/07/21/54000_0a9e6bb1-320e-4b2e-a10a-0bfd4093b9fc.jpg?width=192
+(216, 'Xiaomi', 'Xiaomi Redmi Note 11 Pro', None)
+https://admin.ledikom.mk/uploads/items/1492/1653141418xiaomi-redmi-note-11-pro-1-250x300-pad.jpg?v=1
+(217, 'Tcl', 'Tcl 306', None)
+https://www.a1.mk/documents/20126/2336936/TCL-306_Atlantic-Blue_Front.png
+(219, 'Xiaomi', 'Xiaomi Poco X4 Pro 5G', None)
+https://admin.ledikom.mk/uploads/items/2798/1652776962xiaomi-poco-x4-pro-5g-1-250x300-pad.jpg?v=1
+(220, 'Samsung', 'Samsung Galaxy S22 Ultra 5G', None)
+https://admin.ledikom.mk/uploads/items/1480/1647546041samsung-galaxy-s22-ultra-5g-1-250x300-pad.jpg?v=1
+(221, 'Xiaomi', 'Xiaomi Mi Note 10 Lite', None)
+https://mobelix.com.mk/storage/app/uploads/public/5ec/92e/6d3/thumb_2119_550_800_0_0_crop.png
+(222, 'Samsung', 'Samsung Galaxy M52 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/624/5ca/928/thumb_3764_550_800_0_0_crop.png
+(223, 'OnePlus', 'OnePlus 10 Pro 5G', None)
+https://admin.ledikom.mk/uploads/items/1566/1651355303oneplus-10-pro-1-250x300-pad.jpg?v=1
+(224, 'Samsung', 'Samsung Galaxy A73 5G', None)
+https://admin.ledikom.mk/uploads/items/1564/1651071926samsung-galaxy-a73-5g-1-250x300-pad.jpg?v=1
+(225, 'Xiaomi', 'Xiaomi Mi 12 Pro 5G', None)
+https://mobelix.com.mk/storage/app/uploads/public/628/ba6/995/thumb_3840_550_800_0_0_crop.png
+(226, 'Oppo', 'Oppo Find X3 Lite', None)
+https://mobelix.com.mk/storage/app/uploads/public/629/ddd/5ac/thumb_3862_550_800_0_0_crop.png
+(227, 'Samsung', 'Samsung Galaxy M33 5G', None)
+https://admin.ledikom.mk/uploads/items/3026/1655278093samsung-galaxy-m33-5g-1-250x300-pad.jpg?v=1
+(228, 'OnePlus', 'OnePlus Ace', None)
+https://mobelix.com.mk/storage/app/uploads/public/62c/d2d/bb7/thumb_3883_550_800_0_0_crop.png
+(229, 'Honor', 'Honor Magic4 Pro', None)
+https://mobelix.com.mk/storage/app/uploads/public/62d/574/ea8/thumb_3889_550_800_0_0_crop.png
+(230, 'Alcatel', 'Alcatel 5030F 1SE', None)
+None
+(231, 'Alcatel', 'Alcatel 5030D 1SE', None)
+None
+(232, 'Alcatel', 'Alcatel 5024D 1S', None)
+None
+(233, 'Alcatel', 'Alcatel 2019G', None)
+https://www.neptun.mk/2019/12/31/06a36488-e86c-4599-8c59-7c7a4c588c80_8dbb8b4f-de84-4ae3-8392-5468909ee0e0.png?width=192
+(234, 'Alcatel', 'Alcatel 1066G', None)
+https://akcija.com.mk/app/img/products/gallery/2022/03/Alcatel_1066G_Black.webp
+(235, 'Alcatel', 'Alcatel 1066D', None)
+https://www.neptun.mk/2018/08/14/Tiger_L5_Black_Special_v11.23_1c0a6cd6-8705-42ad-a6ba-db7c7b939b7c.jpg?width=192
+(237, 'Xiaomi', 'Xiaomi Redmi 9C', None)
+https://admin.ledikom.mk/uploads/items/1488/1649683643xiaomi-redmi-9c-nfc-1-250x300-pad.jpg?v=1
+(238, 'Xiaomi', 'Xiaomi Redmi 9A', None)
+https://admin.ledikom.mk/uploads/items/432/redmi9a-48378-250x300-pad.jpg?v=1
+(239, 'Realme', 'Realme C11', None)
+https://www.neptun.mk/2022/03/21/realmec1120212gb32gb04azuladll_253ab3fd-0f10-4c00-97b3-062c3db73710.jpg?width=192
+(240, 'Blackview', 'Blackview A80', None)
+https://akcija.com.mk/app/img/products/gallery/2022/03/Blackview_A80_Black_49835.jpg
+(241, 'Wiko', 'Wiko View Max', None)
+https://akcija.com.mk/app/img/products/gallery/2021/07/WIKVIEMAXWP2ANTST_Wiko_View_Max_Anthracite.webp
+(243, 'Wiko', 'Wiko Lenny 5', None)
+https://akcija.com.mk/app/img/products/gallery/2021/07/WIKLENNYWK400ANTST_Wiko_Lenny5_WK400_Anthracit.webp
+(244, 'Xiaomi', 'Xiaomi Black Shark 4', None)
+https://www.neptun.mk/2021/06/04/xiaomi-black-shark-4-600x600-600x600_78632f44-8eab-4436-8d92-4c30017fa7c5.jpg?width=192
+(245, 'Huawei', 'Huawei Nova 8i', None)
+https://www.neptun.mk/2021/10/21/gsmarena004_415d078d-4c7e-43c8-b76c-857922a385b2.jpg?width=192
+(246, 'Honor', 'Honor Magic4 Lite', None)
+https://www.a1.mk/documents/20126/2315411/Honor-Magic-4-lite-5G-Black-Front.png
+(247, 'Xiaomi', 'Xiaomi Poco M4 Pro 5G', None)
+https://www.a1.mk/documents/20126/2087663/POCO-M4_Pro-5G-black.png
+(249, 'Xiaomi', 'Xiaomi Poco F4 GT', None)
+https://admin.ledikom.mk/uploads/items/2800/1652862618xiaomi-poco-f4-gt-1-250x300-pad.jpg?v=1
+(250, 'Xiaomi', 'Xiaomi Redmi 10C', None)
+https://www.neptun.mk/2022/07/25/Capture1_39933e15-2e42-4fdd-ad50-b26daefc653d.JPG?width=192
+(251, 'Alcatel', 'Alcatel 1B (2020)', None)
+https://www.neptun.mk/2020/12/29/2.jpeg?width=192
+(252, 'LG', 'LG K52', None)
+https://www.a1.mk/documents/20126/1482115/LG-K52.png
+(253, 'Tcl', 'Tcl 20L+', None)
+https://www.a1.mk/documents/20126/2097647/TCL-20-plus-Milky-Way-Grey.png
+(255, 'Nokia', 'Nokia 6300 4G', None)
+https://admin.ledikom.mk/uploads/items/400/1653051754nokia-6300-4g-1-250x300-pad.jpg?v=1
+(256, 'Xiaomi', 'Xiaomi Redmi Note 9 Pro', None)
+https://setec.mk/image/cache/catalog/Product/73864_0-228x228.jpg
+(257, 'Xiaomi', 'Xiaomi 11 Lite 5G NE', None)
+https://www.neptun.mk/2022/07/21/22.JPG?width=192
+(260, 'Motorola', 'Motorola Edge 20', None)
+https://www.neptun.mk/2021/11/24/white_542da90b-c215-4e75-b6a0-416d1cbb745c.JPG?width=192
+(261, 'CAT', 'CAT S62 Pro', None)
+https://www.a1.mk/documents/20126/622141/CAT-S62-front.png
+(262, 'CAT', 'CAT B26', None)
+https://www.a1.mk/documents/20126/622141/CAT-B26.png
+(263, 'Alcatel', 'Alcatel 3082 4G', None)
+https://www.a1.mk/documents/20126/2014065/Alcatel-3082-4G.png
+(264, 'Doro', 'Doro 1370', None)
+https://www.a1.mk/documents/20126/1384010/Doro_1370.png
+(265, 'Alcatel', 'Alcatel 3080G', None)
+https://www.a1.mk/documents/20126/1741700/Alcatel-3080.png
+(266, 'Doro', 'Doro 2404', None)
+https://www.a1.mk/documents/20126/1384010/Doro_2404.png
+(267, 'Motorola', 'Motorola Moto E20', None)
+https://www.a1.mk/documents/20126/2065640/Motorola-MOTO-E20.png
+(270, 'Nokia', 'Nokia 110', None)
+https://www.neptun.mk/2020/02/05/resizer.php_49f522a0-9f44-4a37-8212-e0e1b2995fa8.jpg?width=192
+(271, 'Blackview', 'Blackview A60', None)
+https://setec.mk/image/cache/catalog/Product/48063_0-228x228.jpg
+(272, 'Cubot', 'Cubot J9', None)
+https://setec.mk/image/cache/catalog/Product/50397_0-228x228.jpg
+(273, 'AllCall', 'AllCall Brother 4G', None)
+https://setec.mk/image/cache/catalog/Product/52379_0-228x228.jpg
+(274, 'AllCall', 'AllCall Smooth 4G', None)
+https://setec.mk/image/cache/catalog/Product/53519_0-228x228.jpg
+(275, 'Blackview', 'Blackview A55', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/27062022151936download.jpg
+(276, 'Blackview', 'Blackview A60 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/a60problack_1.jpg
+(277, 'Cubot', 'Cubot Note 20', None)
+https://setec.mk/image/cache/catalog/Product/49840_0-228x228.jpg
+(278, 'Cubot', 'Cubot P30', None)
+https://setec.mk/image/cache/catalog/Product/48542_0-228x228.jpg
+(279, 'Blackview', 'Blackview A70', None)
+https://setec.mk/image/cache/catalog/Product/52744_0-228x228.jpg
+(280, 'Blackview', 'Blackview A80 Plus', None)
+https://setec.mk/image/cache/catalog/Product/50394_0-228x228.jpg
+(282, 'Xiaomi', 'Xiaomi Redmi 9AT', None)
+https://www.neptun.mk/2021/01/27/111_3237af8a-8b15-4e3e-aff8-38a86a1bcb40.jpg?width=192
+(285, 'Realme', 'Realme C21Y', None)
+https://www.neptun.mk/2022/03/21/C21Y-Black_3fe958bc-9eeb-4bc6-8cc5-5caa930a4369.jpg?width=192
+(286, 'Blackview', 'Blackview A80 Pro', None)
+https://setec.mk/image/cache/catalog/Product/49553_0-228x228.jpg
+(287, 'Realme', 'Realme C21', None)
+https://setec.mk/image/cache/catalog/Product/74712_0-228x228.jpg
+(288, 'Samsung', 'Samsung Galaxy A20e', None)
+https://setec.mk/image/cache/catalog/Product/48099_0-228x228.jpg
+(289, 'Motorola', 'Motorola Moto G10', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/g10-auroragrey-front.jpg
+(290, 'Blackview', 'Blackview BV4900 Pro', None)
+https://setec.mk/image/cache/catalog/Product/52740_0-228x228.jpg
+(291, 'Realme', 'Realme C25Y', None)
+https://setec.mk/image/cache/catalog/Product/74998_0-228x228.jpg
+(292, 'Vivo', 'Vivo Y21', None)
+https://setec.mk/image/cache/catalog/Product/52389_0-228x228.jpg
+(293, 'Motorola', 'Motorola Moto G22', None)
+https://www.neptun.mk/2022/06/23/156755-1200-1200.png?width=192
+(294, 'Huawei', 'Huawei nova Y70', None)
+https://setec.mk/image/cache/catalog/Product/75793_0-228x228.jpg
+(295, 'Motorola', 'Motorola Moto G31', None)
+https://www.neptun.mk/2022/06/23/156729-1200-1200.png?width=192
+(296, 'Xiaomi', 'Xiaomi Redmi Note 10S', None)
+https://setec.mk/image/cache/catalog/Product/74694_0-228x228.jpg
+(297, 'OnePlus', 'OnePlus Nord N10 5G', None)
+https://www.neptun.mk/2021/10/18/746380-1000x1000_4a0ec6bb-6131-439e-a4b4-406e57caf52e.jpg?width=192
+(298, 'Realme', 'Realme 8', None)
+https://setec.mk/image/cache/catalog/Product/74996_0-228x228.jpg
+(299, 'Vivo', 'Vivo Y33s', None)
+https://www.neptun.mk/2022/03/21/2_50b1868c-30f0-4a9a-a8c5-180a3868aef5.JPG?width=192
+(300, 'Motorola', 'Motorola Moto G51', None)
+https://setec.mk/image//var/www/setec/image/catalog/Product/75706_0.jpg
+(301, 'Realme', 'Realme 8i', None)
+https://setec.mk/image/cache/catalog/Product/74997_0-228x228.jpg
+(304, 'Huawei', 'Huawei nova Y90', None)
+https://setec.mk/image/cache/catalog/Product/75805_0-228x228.jpg
+(305, 'Vivo', 'Vivo Y72 5G', None)
+https://www.neptun.mk/2022/03/22/33.JPG?width=192
+(306, 'Motorola', 'Motorola Moto G41', None)
+https://setec.mk/image/cache/catalog/Product/75703_0-228x228.jpg
+(307, 'Motorola', 'Motorola Moto G60', None)
+https://setec.mk/image/cache/catalog/Product/74704_0-228x228.jpg
+(308, 'Xiaomi', 'Xiaomi Mi 11 Lite', None)
+https://admin.ledikom.mk/uploads/items/368/1644923487xiaomi-mi-11-lite-1-250x300-pad.jpg?v=1
+(309, 'Motorola', 'Motorola Moto G71', None)
+https://www.neptun.mk/2022/06/23/156684-1600-1600.png?width=192
+(310, 'OnePlus', 'OnePlus Nord CE', None)
+https://admin.ledikom.mk/uploads/items/3042/1655899106oneplus-nord-ce-5g-1-250x300-pad.jpg?v=1
+(313, 'Vivo', 'Vivo V21 5G', None)
+https://www.neptun.mk/2022/03/21/11_e8705b0f-d153-4b36-b5f5-776e49163dbd.JPG?width=192
+(314, 'Xiaomi', 'Xiaomi 11T', None)
+https://www.neptun.mk/2022/05/13/xiaomi-11t-5g-8gb-128gb-dual-sim-blanco41319a91-e898-4122-9dad-0f3115643b9f_65cc4f17-4add-4eea-a64e-49b60f2d45b1.jpg?width=192
+(315, 'Xiaomi', 'Xiaomi Redmi Note 11 Pro+ 5G', None)
+https://setec.mk/image/cache/catalog/Product/75403_0-228x228.jpg
+(316, 'Xiaomi', 'Xiaomi 12X', None)
+https://admin.ledikom.mk/uploads/items/2756/1651663563xiaomi-12x-1-250x300-pad.jpg?v=1
+(318, 'Xiaomi', 'Xiaomi 12', None)
+https://admin.ledikom.mk/uploads/items/1562/1651071199xiaomi-12-1-250x300-pad.jpg?v=1
+(319, 'Samsung', 'Samsung Galaxy Z Flip3 5G', None)
+https://admin.ledikom.mk/uploads/items/401/1642796375samsung-galaxy-z-flip3-5g-1-250x300-pad.jpg?v=1
+(321, 'Huawei', 'Huawei P50 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/11022022143748download.jpg
+(323, 'Apple', 'Apple iPhone 12 Pro Max', None)
+https://i2.wp.com/mobilezone.mk/wp-content/uploads/2021/08/12-pro-max-blue.png?resize=512%2C600&ssl=1
+(325, 'Apple', 'Apple iPhone 12 Mini', None)
+https://i0.wp.com/mobilezone.mk/wp-content/uploads/2021/08/12-mini-blue.png?resize=512%2C600&ssl=1
+(326, 'Apple', 'Apple iPhone 11 Pro', None)
+https://i2.wp.com/mobilezone.mk/wp-content/uploads/2021/08/11-pro-black.png?resize=512%2C600&ssl=1
+(327, 'Apple', 'Apple iPhone 11 Pro Max', None)
+https://i0.wp.com/mobilezone.mk/wp-content/uploads/2021/08/11-pro-max-black.png?resize=512%2C600&ssl=1
+(328, 'Apple', 'Apple iPhone SE (2022)', None)
+https://admin.ledikom.mk/uploads/items/1481/1649102984apple-iphone-se-2022-1-250x300-pad.jpg?v=1
+(329, 'Samsung', 'Samsung Galaxy S22+ 5G', None)
+https://admin.ledikom.mk/uploads/items/1479/1647545279samsung-galaxy-s22-5g-1-250x300-pad.jpg?v=1
+(330, 'Samsung', 'Samsung Galaxy A01 Core', None)
+https://admin.ledikom.mk/uploads/items/297/1642703362samsung-galaxy-a01-core-1-250x300-pad.jpg?v=1
+(331, 'Samsung', 'Samsung Galaxy A31', None)
+None
+(332, 'Samsung', 'Samsung Galaxy A21s', None)
+None
+(333, 'Samsung', 'Samsung Galaxy A51', None)
+None
+(334, 'Samsung', 'Samsung Galaxy A50', None)
+None
+(336, 'Samsung', 'Samsung Galaxy S20 FE', None)
+https://admin.ledikom.mk/uploads/items/319/1642704346samsung-galaxy-s20-fe-1-250x300-pad.jpg?v=1
+(337, 'Xiaomi', 'Xiaomi Redmi 9', None)
+https://setec.mk/image/cache/catalog/Product/73860_0-228x228.jpg
+(338, 'Xiaomi', 'Xiaomi Redmi 9i', None)
+https://admin.ledikom.mk/uploads/items/1486/1649685350xiaomi-redmi-9i-1-250x300-pad.jpg?v=1
+(340, 'Xiaomi', 'Xiaomi Redmi Note 9', None)
+https://setec.mk/image/cache/catalog/Product/74714_0-228x228.jpg
+(341, 'Xiaomi', 'Xiaomi Redmi Note 10 5G', None)
+https://www.neptun.mk/2021/06/14/xiaomiredminote105g00v2grisadl_a83a542a-c9d1-4475-8fc7-dae3521b9bc6.jpg?width=192
+(342, 'Xiaomi', 'Xiaomi Redmi Note 11S', None)
+https://www.neptun.mk/2022/07/19/51UhkQTNxmL.ACSL1000_37699529-bf74-498e-9d9b-ecc8e6b57976.jpg?width=192
+(343, 'Xiaomi', 'Xiaomi 11T Pro', None)
+https://www.neptun.mk/2022/05/13/222_e9b3e0e4-4026-4d87-9b5f-44f05b306611.JPG?width=192
+(344, 'Xiaomi', 'Xiaomi 12 Pro', None)
+https://admin.ledikom.mk/uploads/items/3044/1656151222xiaomi-12-pro-1-250x300-pad.jpg?v=1
+(345, 'Xiaomi', 'Xiaomi Mi A2', None)
+None
+(346, 'Xiaomi', 'Xiaomi Mi A2 Lite', None)
+None
+(348, 'Xiaomi', 'Xiaomi Mi Play', None)
+None
+(349, 'Xiaomi', 'Xiaomi Mi 6', None)
+None
+(350, 'Xiaomi', 'Xiaomi Mi Max 2', None)
+None
+(351, 'Xiaomi', 'Xiaomi Mi A3', None)
+None
+(352, 'Samsung', 'Samsung Galaxy M62', None)
+https://admin.ledikom.mk/uploads/items/356/1642789488samsung-galaxy-m62-1-250x300-pad.jpg?v=1
+(353, 'Samsung', 'Samsung Galaxy A40', None)
+None
+(354, 'Samsung', 'Samsung Galaxy A30s', None)
+None
+(355, 'Samsung', 'Samsung Galaxy A41', None)
+None
+(356, 'Samsung', 'Samsung Galaxy Z Fold 2', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/14102020175047ory-unlocked-global-872783_800x.jpg
+(357, 'Samsung', 'Samsung Galaxy M32', None)
+https://mobelix.com.mk/storage/app/uploads/public/613/094/943/thumb_3309_550_800_0_0_crop.png
+(358, 'Alcatel', 'Alcatel 2003D', None)
+https://www.neptun.mk/2019/11/19/555.jpg_99d86467-c5a7-42e7-8896-2ff76ac4874d.PNG?width=192
+(359, 'Alcatel', 'Alcatel 2053D', None)
+https://www.neptun.mk/2019/11/19/555.jpg_e9a27a11-7377-40e5-ba21-2c42a6216ed8.PNG?width=192
+(360, 'Alcatel', 'Alcatel 3025X', None)
+https://www.neptun.mk/2021/10/25/20200514120927alcatel3025x256mbmetallicblue_5968b52f-10cf-408c-96ee-6ebb76a83d0e.jpeg?width=192
+(361, 'Alcatel', 'Alcatel 3026X', None)
+https://www.neptun.mk/2021/10/25/71qaRJFLH2L.ACSS450_58ea1f14-bd9f-49a4-91e2-2af91b5826a0.jpg?width=192
+(362, 'Alcatel', 'Alcatel 1SE', None)
+https://www.neptun.mk/2021/03/15/1122_3c24c189-3b4b-4b37-9d43-1232b082244b.png?width=192
+(363, 'Alcatel', 'Alcatel 1S (2021)', None)
+https://www.neptun.mk/2021/11/21/Alcatel-1S-2021513x599-1_6c7faa25-0939-4db9-b9ec-b80be480509f.png?width=192
+(364, 'Alcatel', 'Alcatel 1S', None)
+https://akcija.com.mk/app/img/products/gallery/2022/03/Alcatel_5024D_1S_3GB-32GB_LTE_Dual-Sim_Metallic_Black.webp
+(365, 'Alcatel', 'Alcatel 1C', None)
+https://www.neptun.mk/2020/06/03/12_b9efc36f-7581-4ace-a550-007ac853a6cd.jpg?width=192
+(366, 'Alcatel', 'Alcatel 1B (2022)', None)
+https://www.a1.mk/documents/20126/2333741/Alcatel-1B_Front.png
+(367, 'Alcatel', 'Alcatel 1V', None)
+None
+(368, 'Alcatel', 'Alcatel Pixi 4 Power Plus', None)
+None
+(369, 'Alcatel', 'Alcatel 3X', None)
+https://www.neptun.mk/2020/08/14/1122_7fa6daf3-975e-4abe-9edb-197b70ffb150.jpeg?width=192
+(370, 'Alcatel', 'Alcatel 1', None)
+https://www.a1.mk/documents/20126/2142278/Alcatel-1-2021.png
+(371, 'Huawei', 'Huawei Honor 7A', None)
+None
+(372, 'Huawei', 'Huawei Honor 7S', None)
+None
+(373, 'Blackview', 'Blackview A70 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/a70problack.jpg
+(374, 'Blackview', 'Blackview Oscal C20', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/c20purple.jpg
+(375, 'Doogee', 'Doogee X96', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/doogee_x96_2gb_32gb_rojo_01_l.jpg
+(376, 'Doogee', 'Doogee X96 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/doogee-x96-pro_arenamobiles.jpg
+(377, 'Doogee', 'Doogee X95 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/10112021121646x95black_1.jpg
+(378, 'Doogee', 'Doogee X95', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/x95black_1.jpg
+(379, 'Doogee', 'Doogee X93', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/thumb_548333_default_big.jpg
+(380, 'Doogee', 'Doogee S58 Pro', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/doogee_s58_pro_6gb_64gb_05_negro_ad_l.jpg
+(381, 'Motorola', 'Motorola Moto G30', None)
+https://www.neptun.mk/2021/07/02/4_6eaa4b73-2e6d-40b3-86c2-6c5940433cbd.JPG?width=192
+(382, 'Motorola', 'Motorola Moto E7 Plus', None)
+https://www.neptun.mk/2020/11/17/77_55ded608-c4a7-45f6-84e2-1dd826f4db2c.jpg?width=192
+(383, 'Motorola', 'Motorola Moto G100', None)
+https://www.neptun.mk/2021/07/02/1_3c75a06b-29ee-459b-8260-3c065616cf65.JPG?width=192
+(384, 'Motorola', 'Motorola Edge 20 Pro', None)
+https://www.neptun.mk/2021/11/24/Motorola-Edge-20-Pro-128GB-Midnight-Blue-0840023220623-01102021-01-p_6099d602-c2c4-428c-9560-1dd79df3338d.jpg?width=192
+(385, 'Motorola', 'Motorola Moto G50', None)
+https://www.a1.mk/documents/20126/1706113/MOTO-G50.png
+(386, 'Motorola', 'Motorola Moto E6i', None)
+https://www.neptun.mk/2021/11/04/gsmarena004_6a7fd9b3-8102-4bb7-960b-0c72ca683936.jpg?width=192
+(387, 'Motorola', 'Motorola Moto G200', None)
+https://www.neptun.mk/2022/06/23/156709-1600-1600.png?width=192
+(388, 'Motorola', 'Motorola Edge 30', None)
+https://www.neptun.mk/2022/06/23/157221-1600-auto.png?width=192
+(389, 'Realme', 'Realme 9i', None)
+https://www.neptun.mk/2022/03/21/51u9-q9539L.SL1000_f04a7be5-ad53-445d-9bde-9a33c0ff3f33.jpg?width=192
+(390, 'Realme', 'Realme 9 Pro', None)
+https://www.neptun.mk/2022/03/21/Realme-9-Pro-Plus-Green_d8eec8b7-5912-4dea-b36b-a3f66832abd4.jpg?width=192
+(391, 'Realme', 'Realme 9 Pro+', None)
+https://www.neptun.mk/2022/03/21/222_4c36f6d2-1a4b-4e91-a096-21d115330db2.JPG?width=192
+(392, 'Realme', 'Realme GT Master', None)
+https://mobelix.com.mk/storage/app/uploads/public/619/e62/78d/thumb_3468_550_800_0_0_crop.png
+(393, 'Vivo', 'Vivo Y21s', None)
+https://www.neptun.mk/2022/03/21/523920-1000x1000_e0d86853-abff-4048-bd07-e6d6ca0915db.jpg?width=192
+(394, 'Vivo', 'Vivo Y20s', None)
+https://www.neptun.mk/2022/03/21/6935117828220-003-1400Wx1400H_90483936-5a39-47cb-b1c8-f9e868d765c8.jpg?width=192
+(395, 'Nokia', 'Nokia 105 (2019)', None)
+https://www.neptun.mk/2019/10/16/hq_c86c98c2-729b-49d5-aab9-216be2fea777.jpg?width=192
+(396, 'Nokia', 'Nokia 8', None)
+None
+(397, 'Nokia', 'Nokia 106', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/nokia_106.jpg
+(398, 'OnePlus', 'OnePlus Nord N100', None)
+None
+(399, 'OnePlus', 'OnePlus Nord', None)
+None
+(400, 'Infinix', 'Infinix Smart 6', None)
+https://www.neptun.mk/2022/07/08/45_7f5afee7-d808-4111-9853-738a7b5993a3.JPG?width=192
+(401, 'Infinix', 'Infinix Hot 11', None)
+https://www.neptun.mk/2022/07/21/1234_97e5321e-7ec0-438b-8c9b-0c89acb73b2f.JPG?width=192
+(402, 'Infinix', 'Infinix Hot 12i', None)
+https://www.neptun.mk/2022/07/08/333_bda690bd-c2a4-4ee4-82c7-3e4001fd1655.JPG?width=192
+(403, 'Infinix', 'Infinix Note 11 Pro', None)
+https://www.neptun.mk/2021/12/16/infinix-note-11-pro-8-128-zeleni-mobilni-6-95-quot-octa-core-mediatek-helio-g96-8gb-128gb-64mpx-13mpx-2mpx-dual-simZFNfn4_2d108fb3-756e-4d1b-a41a-afeae6104ac9.jpg?width=192
+(404, 'Trevi', 'Trevi Max 10', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/max10black_1.jpg
+(405, 'Trevi', 'Trevi Flex 50 GT', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/flex50gtturnedred.jpg
+(406, 'Trevi', 'Trevi Phablet 5Q2', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/09142292_name.jpg
+(407, 'Energizer', 'Energizer Energy E10', None)
+None
+(408, 'Energizer', 'Energizer Energy E20', None)
+None
+(409, 'Energizer', 'Energizer Energy E241S', None)
+None
+(410, 'Energizer', 'Energizer Hardcase H240S', None)
+None
+(411, 'Energizer', 'Energizer Power Max P550S', None)
+None
+(412, 'Huawei', 'Huawei Mate 10 Lite', None)
+None
+(413, 'Huawei', 'Huawei P10 Lite', None)
+None
+(414, 'Huawei', 'Huawei P20', None)
+None
+(415, 'Huawei', 'Huawei Honor 8X Max', None)
+https://mobelix.com.mk/storage/app/uploads/public/5cd/051/f4c/thumb_1809_550_800_0_0_crop.jpg
+(416, 'Huawei', 'Huawei Y5p', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/510095mub.jpg
+(417, 'Honor', 'Honor 20 Lite', None)
+None
+(418, 'Honor', 'Honor 9 Lite', None)
+None
+(419, 'Huawei', 'Huawei Honor 8X', None)
+None
+(420, 'Honor', 'Honor 10 Lite', None)
+None
+(421, 'Huawei', 'Huawei Honor 9X Lite', None)
+https://i0.wp.com/mobilezone.mk/wp-content/uploads/2021/11/Honor-9x-lite-black.png?resize=512%2C600&ssl=1
+(422, 'Wiko', 'Wiko Power U20', None)
+None
+(423, 'Wiko', 'Wiko Y62', None)
+https://www.a1.mk/documents/20126/2117931/Wiko_Y62.png
+(424, 'Panasonic', 'Panasonic KX-TU160', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/21122021152115ilt-in-camera-main-camera-03-mp.jpg
+(425, 'Panasonic', 'Panasonic KX-TU155', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/21122021141255download.jpg
+(426, 'Vivax', 'Vivax Fly 6', None)
+None
+(427, 'Vivax', 'Vivax Pro M1', None)
+None
+(428, 'Vivax', 'Vivax Fun S10', None)
+None
+(429, 'Vivax', 'Vivax Fun S20', None)
+None
+(430, 'Vivax', 'Vivax Point X2', None)
+None
+(431, 'Vivax', 'Vivax Fly 5 Lite', None)
+None
+(432, 'Vivax', 'Vivax Fly V1', None)
+None
+(433, 'Vivax', 'Vivax Point X502', None)
+None
+(434, 'Vivax', 'Vivax Point X1', None)
+None
+(435, 'Vivax', 'Vivax Fun S1', None)
+None
+(436, 'Oppo', 'Oppo A15s', None)
+None
+(437, 'Oppo', 'Oppo Reno4 Z 5G', None)
+None
+(438, 'Oppo', 'Oppo Reno5 5G', None)
+None
+(439, 'Oppo', 'Oppo Reno4 Lite', None)
+None
+(440, 'Oppo', 'Oppo A94 5G', None)
+https://admin.ledikom.mk/uploads/items/3040/1655892316oppo-a94-5g-1-250x300-pad.jpg?v=1
+(441, 'Oppo', 'Oppo Find X5 Lite', None)
+https://admin.ledikom.mk/uploads/items/3041/1655898755oppo-find-x5-lite-5g-1-250x300-pad.jpg?v=1
+(442, 'Tesla', 'Tesla Smartphone 3.4', None)
+None
+(443, 'Tesla', 'Tesla Feature 3', None)
+None
+(444, 'MeanIT', 'MeanIT Veteran I', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/11012022150451veteranivplus_1.jpg
+(445, 'MeanIT', 'MeanIT Senior Flip XL', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/seniorflipxl_1.jpg
+(446, 'Denver', 'Denver B183', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/denver-bas-18300m-1.jpg
+(447, 'Denver', 'Denver B242', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/23022022105342123.jpg
+(448, 'Noa', 'Noa Fresh 4G', None)
+None
+(449, 'Noa', 'Noa N2', None)
+None
+(450, 'Noa', 'Noa Sprint 4G', None)
+None
+(451, 'Samsung', 'Samsung Galaxy J7', None)
+None
+(452, 'Manta', 'Manta MS1701', None)
+https://d3mrte3vpewnxc.cloudfront.net/img/products/full/09150922_name.jpg

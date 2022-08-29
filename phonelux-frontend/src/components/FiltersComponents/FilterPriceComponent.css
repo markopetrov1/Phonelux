@@ -1,0 +1,16 @@
+#priceContainer{
+    display: flex;
+}
+
+#slider{
+    margin-top: 20px;
+}
+
+#box{
+    margin-left: 20px;
+}
+
+#priceLabel{
+    margin-top: 23px;
+    font-size: 17px;
+}

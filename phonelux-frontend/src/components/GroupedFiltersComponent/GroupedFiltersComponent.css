@@ -1,0 +1,20 @@
+#filtersDiv{
+    background-color: #91AD7E;
+    display: flex;
+}
+
+/* #filtersDiv > div{
+    margin-left: 30px;
+} */
+
+
+#filtersDiv > div{
+    margin-left: 30px;
+}
+
+#filtersDiv > div:nth-of-type(4){
+    margin-top: 15px;
+    margin-left: 200px;
+}
+
+

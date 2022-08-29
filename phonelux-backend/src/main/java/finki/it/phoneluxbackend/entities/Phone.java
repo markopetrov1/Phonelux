@@ -24,6 +24,9 @@ public class Phone {
     @Column(name = "model")
     private String model;
 
+    @Column(name = "image_url")
+    private String image_url;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "phone")
     @JsonIgnore
     private List<PhoneOffer> phoneOffers;

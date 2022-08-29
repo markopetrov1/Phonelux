@@ -18,14 +18,11 @@ public class PhoneController {
         this.phoneService = phoneService;
     }
 
+
+    // handle request parameters for filtering phones
     @GetMapping
     public List<Phone> getPhones(){
         return phoneService.getPhones();
-    }
-
-    @PostMapping(path = "{phoneId}")
-    public List<PhoneOffer> getOffersForPhone(@PathVariable("phoneId") Long phoneId){
-        return phoneService.getOffersForPhone(phoneId);
     }
 
 }
