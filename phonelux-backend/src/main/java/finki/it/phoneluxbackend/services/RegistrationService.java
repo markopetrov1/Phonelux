@@ -1,5 +1,9 @@
 package finki.it.phoneluxbackend.services;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.io.JsonStringEncoder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import finki.it.phoneluxbackend.data.RegistrationRequest;
 import finki.it.phoneluxbackend.data.UserRole;
 import finki.it.phoneluxbackend.entities.ConfirmationToken;
@@ -7,10 +11,15 @@ import finki.it.phoneluxbackend.entities.User;
 import finki.it.phoneluxbackend.security.email.EmailSender;
 import finki.it.phoneluxbackend.security.email.EmailValidator;
 import lombok.AllArgsConstructor;
+import org.apache.coyote.Response;
+import org.apache.tomcat.util.json.JSONParser;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 
 @Service
 @AllArgsConstructor
@@ -21,23 +30,30 @@ public class RegistrationService {
     private final EmailSender emailSender;
 
 
-    public String register(RegistrationRequest request) {
+    public ResponseEntity<Object> register(RegistrationRequest request) {
         boolean isValidEmail = emailValidator.test(request.getEmail());
 
-        // validacija za mejl na frontend ?
+        // mail is validated on frontend already
         if (!isValidEmail)
             throw new IllegalStateException("Email"+request.getEmail()+" not valid!");
 
-        String token = userService.signUpUser(
+        ResponseEntity response = userService.signUpUser(
                 new User(request.getFirstName(),
                         request.getLastName(),
                         request.getEmail(),
                         request.getPassword(),
                         UserRole.USER));
 
-        String link = "http://localhost:8080/registration/confirm?token="+token;
+        if (response.getStatusCode() == HttpStatus.BAD_REQUEST)
+        {
+            return response;
+        }
+
+        String link = "http://localhost:8080/registration/confirm?token="+response.getBody()
+                .toString().split(":")[1];
         emailSender.send(request.getEmail(), buildEmail(request.getFirstName(),link));
-        return token;
+
+        return response;
     }
 
     private String buildEmail(String name, String link) {
@@ -112,16 +128,22 @@ public class RegistrationService {
 
     @Transactional
     public String confirmToken(String token) {
-        ConfirmationToken confirmationToken = confirmationTokenService.getToken(token)
-                .orElseThrow(() -> new IllegalStateException("Token not found!"));
+        boolean confirmationTokenExists = confirmationTokenService.getToken(token).isPresent();
+
+        ConfirmationToken confirmationToken;
+
+        if(confirmationTokenExists)
+            confirmationToken = confirmationTokenService.getToken(token).get();
+        else
+            return "Token not found!";
 
         if(confirmationToken.getConfirmedAt() != null)
-            throw new IllegalStateException("Email already confirmed!");
+            return "Email already confirmed!";
 
         LocalDateTime expiresAt = confirmationToken.getExpiresAt();
 
         if (expiresAt.isBefore(LocalDateTime.now())){
-            throw new IllegalStateException("Token expired");
+            return "Token expired";
         }
 
         confirmationTokenService.setConfirmedAt(token);

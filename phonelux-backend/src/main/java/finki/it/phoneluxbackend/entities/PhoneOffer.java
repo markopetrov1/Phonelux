@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -71,6 +73,9 @@ public class PhoneOffer {
 
     @Column(name = "offer_shop_code")
     private String offer_shop_code;
+
+    @ManyToMany(mappedBy = "favouriteOffers")
+    private List<User> users = new ArrayList<User>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "phone_id", referencedColumnName = "id")

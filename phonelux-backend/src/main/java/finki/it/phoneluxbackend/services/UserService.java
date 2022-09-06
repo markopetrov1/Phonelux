@@ -1,9 +1,12 @@
 package finki.it.phoneluxbackend.services;
 
+
 import finki.it.phoneluxbackend.entities.User;
 import finki.it.phoneluxbackend.repositories.UserRepository;
 import finki.it.phoneluxbackend.entities.ConfirmationToken;
 import lombok.AllArgsConstructor;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+
 import java.util.UUID;
 
 @Service
@@ -27,12 +31,19 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User with email "+email+" not found!"));
     }
 
-    public String signUpUser(User user)
+    public ResponseEntity<Object> signUpUser(User user)
     {
-       boolean userExists =  userRepository.findByEmail(user.getEmail()).isPresent();
+       boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
 
-       if (userExists && user.getEnabled()){
-           throw new IllegalStateException("Email "+user.getEmail()+" already taken!");
+
+       if (userExists){
+           User userToRegister =  userRepository.findByEmail(user.getEmail()).get();
+           if(userToRegister.getEnabled()) {
+               return ResponseEntity.badRequest().body("Error: Email "+user.getEmail()+" already taken!");
+           }
+           else {
+               return ResponseEntity.badRequest().body("Email "+user.getEmail()+" not activated!" );
+           }
        }
 
        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
@@ -48,7 +59,7 @@ public class UserService implements UserDetailsService {
 
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 
-        return token;
+        return ResponseEntity.ok().body("token:"+token);
     }
 
     public int enableUser(String email) {

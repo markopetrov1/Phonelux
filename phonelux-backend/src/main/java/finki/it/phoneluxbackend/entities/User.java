@@ -7,15 +7,18 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "users")
+@Entity(name = "User")
+@Table(name = "users")
 public class User implements UserDetails {
 
     @SequenceGenerator(
@@ -37,6 +40,14 @@ public class User implements UserDetails {
     private UserRole userRole;
     private Boolean locked = false;
     private Boolean enabled = false;
+
+    @ManyToMany
+    @JoinTable(
+            name = "users_favourite_offers",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "offer_id")
+    )
+    private List<PhoneOffer> favouriteOffers = new ArrayList<PhoneOffer>();
 
     public User(String firstName, String lastName, String email, String password, UserRole userRole) {
         this.firstName = firstName;

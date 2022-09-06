@@ -27,6 +27,12 @@ public class Phone {
     @Column(name = "image_url")
     private String image_url;
 
+    @Column(name = "total_offers")
+    private Integer total_offers;
+
+    @Column(name = "lowest_price")
+    private Integer lowestPrice;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "phone")
     @JsonIgnore
     private List<PhoneOffer> phoneOffers;

@@ -1,19 +1,22 @@
 package finki.it.phoneluxbackend.security.configs;
 
+import finki.it.phoneluxbackend.security.CustomAuthenticationFilter;
+import finki.it.phoneluxbackend.security.CustomAuthorizationFilter;
 import finki.it.phoneluxbackend.services.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.SecurityBuilder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import static org.springframework.http.HttpMethod.GET;
 
 @Configuration
 @AllArgsConstructor
@@ -25,14 +28,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/registration/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated().and()
-                .formLogin();
+//        http
+//                .csrf().disable()
+//                .authorizeRequests()
+//                .antMatchers("/registration/**")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated().and()
+//                .formLogin();
+
+        http.csrf().disable();
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//        http.authorizeRequests().antMatchers(GET,"/phones").hasAnyAuthority("USER");
+        http.authorizeRequests().anyRequest().permitAll();
+        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
+        http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
 
     }
 
@@ -41,6 +51,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(daoAuthenticationProvider());
     }
 
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     public DaoAuthenticationProvider daoAuthenticationProvider(){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
