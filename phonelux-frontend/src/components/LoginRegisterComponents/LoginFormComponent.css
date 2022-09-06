@@ -1,0 +1,146 @@
+.loginform-main-div {
+  text-align: center;
+  justify-content: center;
+  display: flex; 
+  padding-top: 40px;
+  padding-bottom: 90px;
+  background-color: #e1e3eb;
+  height: 100%;
+}
+
+
+.loginform-sub-main-div{
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+  padding-top: 30px;
+  border-radius: 60px; 
+  background-color: white;
+  width: 65%;
+
+}
+.loginform-imgs-div {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+.loginform-image-container {
+  background-color: rgb(223, 221, 221); 
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+.loginform-profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 130px;
+} 
+
+.loginform-sub-main-div > div{
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.loginform-email-input > .inputform-validation-container > .validation-inputs{
+  width: 50%;
+}
+
+.loginform-password-input > .inputform-validation-container > .validation-inputs{
+  width: 50%;
+}
+
+.validation-inputs{
+    width: 100%;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px rgb(197, 189, 189);
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+
+.inputform-validation-container{
+  width: 100%;
+  justify-content: center;
+}
+
+
+.validation-inputs{
+    padding-left: 20px;
+    font-size: 22px;
+    width: 100%;
+}
+
+
+.loginform-button{
+    width: 80%;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #91AD7E ;
+    color: white;
+    font-size: 25px;
+    border: none;
+    margin-top: 30px;
+}
+
+.loginform-button:hover{
+  background-color: #5c6b52 ;
+  cursor:pointer;
+}
+
+.form-error-span{
+  font-size: 12px;
+  padding: 3px;
+  color:red;
+  display: block;
+  justify-content: center;
+  display: none;
+}
+
+.loginform-sub-main-div > div{
+  width: 90%;
+}
+
+.loginform-button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.inputform-validation-container input:invalid[focused="true"] ~ span{
+  display: block;
+}
+
+.loginform-password-input{
+  margin-top: 15px;
+}
+
+.inputform-validation-container input:invalid[focused="true"]{
+  border: 1px solid red;
+}
+
+.form-error-span{
+  width: 100%;
+}
+
+.register-link{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(53, 99, 70);
+    text-decoration: none;
+    color: blue;
+}
+ .register-link > a{
+     color: rgb(53, 99, 70);
+     text-decoration: none;
+ }
+
+ .register-link > a:hover{
+  color: blue;
+ }

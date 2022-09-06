@@ -58,17 +58,29 @@ const Search = styled('div')(({ theme }) => ({
   }));
 
 export default class SearchFieldComponent extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+
+  handleChange = (event) => {
+    this.props.changeHandler({searchValue: event.target.value})
+  }
+  
   render() {
     return (
-        <Search id="searchfield">
+        <Search onChange={this.handleChange} className="search-phone-field">
         <SearchIconWrapper id="iconwrapper">
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-        id="search"
+          className="search-phone-input"
           placeholder="Пребарувај…"
           inputProps={{ 'aria-label': 'search' }}
-        />
+        />  
       </Search>
     )
   }

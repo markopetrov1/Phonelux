@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -7,67 +8,101 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import "./FilterSelectComponent.css"
+import axios from 'axios';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 5.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
+export class FilterSelectComponent extends React.Component {
 
-const categories = [
-  'Category1',
-  'Category2',
-  'Category3',
-  'Category4',
-  'Category5',
-  'Category6',
-  'Category7',
-  'Category8',
-  'Category9',
-  'Category10',
-];
+    constructor(props) {
+      super(props)
+        
+      this.state = {
+         pickedItems: [],
+         items: [],
+         type: '',
+         ITEM_HEIGHT: 48,
+         ITEM_PADDING_TOP: 8,
+         MenuProps: {}
+      }
+ 
+    }
 
-export default function MultipleSelectCheckmarks() {
-  const [category, setCategory] = React.useState([]);
+    componentDidMount(){
+        this.state.MenuProps = {
+            PaperProps: {
+              style: {
+                maxHeight: this.state.ITEM_HEIGHT * 5.5 + this.state.ITEM_PADDING_TOP,
+                width: 250,
+              },
+            },
+        }
 
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setCategory(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
-  };
 
-  return (
-    <div>
-      <FormControl id="form" sx={{ m: 1, width: 200 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Category</InputLabel>
-        <Select
-          size={"small"}
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
-          multiple
-          value={category}
-          onChange={handleChange}
-          input={<OutlinedInput label="Category" />}  // tuka odi soodvetno imeto na filter
-          renderValue={(selected) => selected.join(', ')}
-          MenuProps={MenuProps}
->
-          {categories.map((cat) => (
-            <MenuItem key={cat} value={cat}>
-              <Checkbox checked={category.indexOf(cat) > -1} />
-              <ListItemText primary={cat} />
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
-  );
+        let endpoint 
+        if(this.props.type == 'brands')
+        {
+          endpoint = '/brands'
+          this.setState({
+            type: 'Брендови'
+          })
+        }
+        else{
+          endpoint = '/shops'
+          this.setState({
+            type: 'Продавници'
+          })
+        }
+
+        axios.get(endpoint)
+        .then(response => this.setState({items: response.data}))
+        .catch(error => console.log(error))
+    }
+
+    handleChange = (event) => {
+       let value = event.target.value
+        this.setState({
+            pickedItems: typeof value === 'string' ? value.split(',') : value
+        }, ()=>{
+          if(this.props.type == 'brands')
+          {
+            this.props.changeHandler({brands: this.state.pickedItems.join(',')})
+          }
+          
+          if(this.props.type == 'shops')
+          {
+            this.props.changeHandler({shops: this.state.pickedItems.join(',')})
+          }
+          
+        })
+      };
+
+
+  render() {
+    return (
+        <div>
+        <FormControl className="form-select-component" sx={{ m: 1, width: 200 }}>
+          <InputLabel className="input-select-label">{this.state.type}</InputLabel>
+          <Select
+            size={"small"}
+            labelId="input-label-id"
+            className="input-select-option"
+            multiple
+            value={this.state.pickedItems}
+            onChange={this.handleChange}
+            input={<OutlinedInput className='inner-input-selectfilter' label={this.state.type} />} 
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={this.state.MenuProps}
+  >
+            {this.state.items.map((item) => (
+              <MenuItem key={item} value={item}>
+                <Checkbox checked={this.state.pickedItems.indexOf(item) > -1} />
+                <ListItemText primary={item} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </div>
+    )
+  }
 }
+
+export default FilterSelectComponent

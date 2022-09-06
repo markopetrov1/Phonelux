@@ -1,5 +1,14 @@
-#searchfield{
-    display: flex;
-    border-radius: 20px;
-    height: fit-content;
+.search-phone-field{
+        /* display: flex;
+        height: fit-content;
+        border-radius: 20px; */
+        border: 1px solid rgb(131, 125, 125);
 }
+
+.search-phone-input{
+    margin:5px;
+}
+
+
+
+

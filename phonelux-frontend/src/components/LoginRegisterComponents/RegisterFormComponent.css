@@ -1,0 +1,161 @@
+.registerform-main-div {
+    text-align: center;
+    justify-content: center;
+    display: flex; 
+    padding-top: 40px;
+    padding-bottom: 90px;
+    background-color: #e1e3eb;
+    height: 100%;
+  }
+  body{height: 100%;}
+
+  .registerform-sub-main-div{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+    padding-top: 30px;
+    border-radius: 60px; 
+    background-color: white;
+    width: 65%;
+
+  }
+  .registerform-imgs-div {
+      padding-top: 20px;
+      justify-content: center;
+      display: flex;
+    }
+  .registerform-image-container {
+    background-color: rgb(223, 221, 221); 
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+  }
+  .registerform-profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 130px;
+  } 
+
+  .registerform-sub-main-div > div{
+    margin-bottom: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .validation-inputs{
+      width: 300px;
+      height: 50px;
+      border-radius: 60px;
+      box-shadow: inset 0px 0px 25px 0px rgb(197, 189, 189);
+      border: none;
+      outline: none;
+      background-color: #fff;
+  }
+
+
+  .registerform-name-lastname div{
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .registerform-name-lastname{
+    display: flex;
+  }
+
+  .registerform-name-lastname input{
+    width: 90%;
+  }
+
+  .registerform-confirm-password-input{
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .inputform-validation-container{
+    width: 100%;
+  }
+
+
+  .validation-inputs{
+      padding-left: 20px;
+      font-size: 22px;
+      width: 100%;
+  }
+
+  .registerform-password-input > .inputform-validation-container > .validation-inputs{
+    width: 50%;
+  }
+
+  .registerform-password-input{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.registerform-email-input{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.lastname-input{
+    padding-top: 20px;
+}
+
+.registerform-confirm-password-input input{
+  width: 50%;
+}
+
+.password-input input{
+width: 50%;
+} 
+
+.registerform-email-input input{
+  width: 50%;
+}
+
+
+  .registerform-button{
+      width: 80%;
+      height: 50px;
+      border-radius: 60px;
+      background-color: #91AD7E ;
+      color: white;
+      font-size: 25px;
+      border: none;
+      margin-top: 30px;
+  }
+
+  .registerform-button:hover{
+    background-color: #5c6b52 ;
+    cursor:pointer;
+  }
+
+  .form-error-span{
+    font-size: 12px;
+    padding: 3px;
+    color:red;
+    display: block;
+    justify-content: center;
+    display: none;
+  }
+
+  .inputform-validation-container input:invalid[focused="true"] ~ span{
+    display: block;
+  }
+
+  .inputform-validation-container  input:invalid[focused="true"]{
+    border: 1px solid red;
+  }
+
+
+  .form-error-span{
+    width: 100%;
+  }
+
+
+

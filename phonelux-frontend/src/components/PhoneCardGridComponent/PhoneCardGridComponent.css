@@ -1,0 +1,17 @@
+
+
+.phonecardgrid-wrapper{  
+    background-color: #DEE4E1;
+}
+
+
+.phonecardgrid-grid-container{
+    width: fit-content;
+}
+
+.phonecardgrid-item{
+    display: flex;
+    justify-content: center;
+}
+
+

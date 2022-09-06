@@ -1,16 +1,17 @@
-#priceContainer{
+.sliderPriceContainer{
     display: flex;
+
 }
 
-#slider{
-    margin-top: 20px;
+#priceSlider{
+    margin-top: 15px;
 }
 
-#box{
+.sliderBox{
     margin-left: 20px;
 }
 
-#priceLabel{
-    margin-top: 23px;
+.sliderPriceLabel{
+    margin-top: 20px;
     font-size: 17px;
 }

@@ -1,0 +1,52 @@
+.phonecard{
+    background-color: #B6E2C8;
+    padding:15px;
+    justify-items: center;
+    width: 250px;
+    height: 400px;
+    border-radius: 25px;
+}
+
+.phonecard:hover{
+    background-color: #84c69f;
+    cursor: pointer;
+}
+
+.phonecard img{
+    width: 200px;
+    height: 250px;
+    border-radius: 25px;
+    margin-left: 25px;
+}
+
+.phonecard-paper{
+    width: fit-content;
+    border-radius: 25px;    
+}
+
+.phonecard-lowestprice-header, .phonecard-totaloffers-header{
+    margin-top: -10px;
+    color: rgb(34, 106, 106);
+    text-align: center;
+}
+
+.phonecard-model-header{
+    text-align: center;
+}
+
+
+.phonecard-lowestprice{
+    font-size: 20px;
+}
+
+.phonecard-totaloffers{
+    font-size: 20px;
+}
+
+.phonecard > h5 > p{
+    display: inline;
+}
+
+.phonecard > h6 > p{
+    display: inline;
+}

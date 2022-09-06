@@ -1,0 +1,12 @@
+.sortby-component-wrapper{
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    background-color: #DEE4E1
+}
+
+.sortby-component-select{
+    font-size: 15px;
+    width: 15%;
+    background-color: #e6f8ef;
+}

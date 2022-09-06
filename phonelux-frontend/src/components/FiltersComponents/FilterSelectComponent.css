@@ -1,4 +1,8 @@
-#demo-multiple-checkbox{
-    margin-top: 10px;
+.input-select-label{
+    margin-top: -5px;
 }
 
+.input-select-option fieldset{
+    border-radius: 20px;
+
+}

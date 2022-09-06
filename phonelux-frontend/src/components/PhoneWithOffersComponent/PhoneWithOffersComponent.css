@@ -1,0 +1,52 @@
+.phone-with-offers-sub-main{
+    background-color: #DEE4E1;
+}
+
+.phone-with-offers-totaloffers-div{
+    display: flex;
+    justify-content: end;
+}
+
+.phone-with-offers-totaloffers-div > h3{
+    margin-right: 30px;
+}
+
+.phone-with-offers-image-wrapper{
+    display: flex; 
+    justify-content: center;
+}
+
+.phone-with-offers-image{
+    width: 250px;
+    height: 300px;
+}
+
+.phone-with-offers-table-row:nth-of-type(even){
+    background-color: #DEE4E1;
+}
+
+.phone-with-offers-model-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.phone-with-offers-table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.phone-with-offers-table-row{
+    border: 1px solid gainsboro;
+    padding: 20px ;
+}
+
+.phone-with-offers-table td{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.phone-with-offers-table-head{
+    background-color: #a6c9ab;
+    font-size: 22px;
+}

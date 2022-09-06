@@ -1,20 +1,7 @@
-#filtersDiv{
-    background-color: #91AD7E;
+.grouped-filters-component{
+    background-color: #a6c9ab;
     display: flex;
-}
-
-/* #filtersDiv > div{
-    margin-left: 30px;
-} */
-
-
-#filtersDiv > div{
-    margin-left: 30px;
-}
-
-#filtersDiv > div:nth-of-type(4){
-    margin-top: 15px;
-    margin-left: 200px;
+    padding: 20px;
 }
 
 

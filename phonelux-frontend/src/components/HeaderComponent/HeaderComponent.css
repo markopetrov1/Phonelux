@@ -1,10 +1,10 @@
-#header{
+.header-component{
     background-color: #B6E2C8;
     display: flex;
     justify-content: center;
 }
 
-#header img{
+.header-component img{
     width: 310px;
     height: 200px;
 }
