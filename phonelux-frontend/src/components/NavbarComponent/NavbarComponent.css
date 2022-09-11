@@ -1,0 +1,16 @@
+.phonelux-navbar{
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.navbar-account-box-icon{
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.navbar-account-box-icon:hover{
+    cursor: pointer;
+}
+
+
+/* style={{ fontSize: '50px', marginTop: '10px' }} */

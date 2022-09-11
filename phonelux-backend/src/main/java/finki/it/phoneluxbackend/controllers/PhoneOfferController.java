@@ -15,14 +15,18 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path = "/phones/offers/{phoneId}")
 public class PhoneOfferController {
     private final PhoneOfferService phoneOfferService;
     private final PhoneService phoneService;
 
-    @GetMapping
+    @GetMapping(path = "/phones/offers/{phoneId}")
     public List<PhoneOffer> getOffersForPhone(@PathVariable("phoneId") Long phoneId){
         return phoneOfferService.getPhoneOffersForPhone(phoneId);
+    }
+
+    @GetMapping(path = "/phoneoffer/{offerId}")
+    public PhoneOffer getPhoneOffer(@PathVariable("offerId") Long offerId){
+        return phoneOfferService.getPhoneOffer(offerId);
     }
 
 }

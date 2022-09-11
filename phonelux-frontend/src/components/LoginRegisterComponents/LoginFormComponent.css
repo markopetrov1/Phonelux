@@ -15,14 +15,14 @@
   height: fit-content;
   width: fit-content;
   box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
-  padding-top: 30px;
+  padding-top: 20px;
   border-radius: 60px; 
   background-color: white;
   width: 65%;
 
 }
 .loginform-imgs-div {
-    padding-top: 20px;
+    padding-top: 10px;
     justify-content: center;
     display: flex;
   }
@@ -42,7 +42,7 @@
 } 
 
 .loginform-sub-main-div > div{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-left: 80px;
   margin-right: 80px;
 }
@@ -136,11 +136,28 @@
     text-decoration: none;
     color: blue;
 }
- .register-link > a{
-     color: rgb(53, 99, 70);
-     text-decoration: none;
+
+
+
+ .registerform-link{
+  color: rgb(53, 99, 70);
+  text-decoration: none;
  }
 
- .register-link > a:hover{
-  color: blue;
+ .registerform-link:hover{
+   color: blue;
+ }
+
+ .loginform-message-wrapper{
+  display: flex;
+  justify-content: center;
+ }
+
+ .loginform-error-message{
+  color: red;
+  border: 1px solid red;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: rgb(251, 224, 224);
  }

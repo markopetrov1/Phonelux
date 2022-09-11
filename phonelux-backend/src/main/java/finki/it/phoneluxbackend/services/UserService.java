@@ -39,10 +39,10 @@ public class UserService implements UserDetailsService {
        if (userExists){
            User userToRegister =  userRepository.findByEmail(user.getEmail()).get();
            if(userToRegister.getEnabled()) {
-               return ResponseEntity.badRequest().body("Error: Email "+user.getEmail()+" already taken!");
+               return ResponseEntity.badRequest().body("Error:Е-маил адресата е веќе зафатена!");
            }
            else {
-               return ResponseEntity.badRequest().body("Email "+user.getEmail()+" not activated!" );
+               return ResponseEntity.badRequest().body("Error:Профилот не е активиран. Потврдете на вашата е-маил адреса!" );
            }
        }
 

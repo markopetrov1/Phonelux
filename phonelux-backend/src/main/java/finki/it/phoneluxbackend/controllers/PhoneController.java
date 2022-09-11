@@ -21,10 +21,13 @@ public class PhoneController {
 
 //     handle request parameters for filtering phones
     @GetMapping(path = "/phones")
-    public List<Phone> getPhones(){
-        return phoneService.getPhones().stream()
-                .sorted(Comparator.comparing(Phone::getTotal_offers).reversed())
-                .collect(Collectors.toList());
+    public List<Phone> getPhones(@RequestParam(name = "shops", required = false) String shops,
+                                 @RequestParam(name = "brands", required = false) String brands,
+                                 @RequestParam(name = "sortBy", required = false) String sortBy,
+                                 @RequestParam(name = "priceRange", required = false) String priceRange,
+                                 @RequestParam(name = "searchValue", required = false) String searchValue){
+
+        return phoneService.getPhones(shops,brands,sortBy,priceRange,searchValue);
     }
 
     @GetMapping(path = "/phones/{phoneId}")

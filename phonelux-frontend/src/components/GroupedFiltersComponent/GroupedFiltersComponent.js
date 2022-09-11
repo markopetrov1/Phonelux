@@ -21,10 +21,6 @@ export default class GroupedFiltersComponent extends Component {
   }
   
 
-  componentDidMount(){
-  
-  }
-
   render() {
     return (
       <>

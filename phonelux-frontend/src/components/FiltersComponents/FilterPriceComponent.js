@@ -18,7 +18,6 @@ export class FilterPriceComponent extends React.Component {
 
   componentDidMount(){
 
-
   axios.get('/lowestPrice')
     .then(response => this.setState({minValue: response.data}))
     .catch(error => console.log(error)) 

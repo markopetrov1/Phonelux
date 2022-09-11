@@ -22,7 +22,7 @@
 
   }
   .registerform-imgs-div {
-      padding-top: 20px;
+      padding-top: 5px;
       justify-content: center;
       display: flex;
     }
@@ -157,5 +157,27 @@ width: 50%;
     width: 100%;
   }
 
+  .registerform-message-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  .registerform-error-message{
+    color: red;
+    border: 1px solid red;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(251, 224, 224);
+  }
+
+  .registerform-success-message{
+    color: green;
+    border: 1px solid green;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #B6E2C8;
+  }
 
 

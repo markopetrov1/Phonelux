@@ -30,7 +30,7 @@ export class PhoneWithOffersComponent extends Component {
 
         <div className='phone-with-offers-sub-main'>
             <div className='phone-with-offers-totaloffers-div'>
-                <h3>Понуди: {this.props.total_offers}</h3>
+                <h3 className='phone-with-offers-totaloffers-header'>Понуди: {this.props.total_offers}</h3>
             </div>
 
             <div className='phone-with-offers-image-wrapper'>
@@ -40,7 +40,7 @@ export class PhoneWithOffersComponent extends Component {
             </div>
 
             <div className='phone-with-offers-model-wrapper'>
-            <h1>{this.props.model}</h1>
+            <h1 className='phone-with-offers-model-header'>{this.props.model}</h1>
             </div>
         </div>
 
@@ -57,7 +57,7 @@ export class PhoneWithOffersComponent extends Component {
             </thead>
             <tbody>
               {
-                this.state.phone_offers.map((offer) => <PhoneOfferComponent key={offer.offer_id} id={offer.id}
+                this.state.phone_offers.map((offer,idx) => <PhoneOfferComponent key={idx} id={offer.id}
                 is_validated={offer.is_validated} offer_shop={offer.offer_shop} offer_name={offer.offer_name}
                 price={offer.price} offer_url={offer.offer_url}
                 />) 

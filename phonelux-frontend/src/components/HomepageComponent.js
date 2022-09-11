@@ -3,17 +3,18 @@ import GroupedFiltersComponent from './GroupedFiltersComponent/GroupedFiltersCom
 import HeaderComponent from './HeaderComponent/HeaderComponent'
 import PhoneCardGridComponent from './PhoneCardGridComponent/PhoneCardGridComponent'
 
+
 export class HomepageComponent extends Component {
 
 constructor(props) {
   super(props)
 
   this.state = {
-    shops: null,
-    brands: null,
-    priceRange: null,
-    searchValue: null,
-    sortBy: null
+    shops: '',
+    brands: '',
+    priceRange: '',
+    searchValue: '',
+    sortBy: 'mostPopular'
   }
 }
 
@@ -45,6 +46,7 @@ changeFilters = (e) => {
     this.setState({
       searchValue: e.searchValue
     })
+
   }
 
   if(e.hasOwnProperty('sortBy'))
@@ -55,12 +57,13 @@ changeFilters = (e) => {
   }
 }
 
+
   render() {
     return (
         <>
         <HeaderComponent/>
         <GroupedFiltersComponent passFilters={this.changeFilters}/>
-        <PhoneCardGridComponent/>
+        <PhoneCardGridComponent {...this.state}/>
         </>
     )
   }

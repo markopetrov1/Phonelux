@@ -19,6 +19,7 @@ export class RegisterFormComponent extends Component {
         email: '',
         password: '',
         confirmPassword:'',
+        serverResponse: ''
       }
     }
   
@@ -42,11 +43,15 @@ export class RegisterFormComponent extends Component {
         };
 
         axios(config)
-        .then(function (response) {
-          console.log(response);
+        .then((response) => {
+          this.setState({
+            serverResponse: response.data
+          })
         })
-        .catch(function (error) {
-          console.log(error);
+        .catch((error) => {
+          this.setState({
+            serverResponse: error.response.data
+          })
         });
 
     }
@@ -58,8 +63,6 @@ export class RegisterFormComponent extends Component {
     }
 
 
-    
-
   render() {
 
     const {firstName,lastName,email,password,confirmPassword} = this.state
@@ -68,6 +71,26 @@ export class RegisterFormComponent extends Component {
         <div className="registerform-main-div">
          <div className="registerform-sub-main-div">
            <div>
+
+            {(() => {
+              if(this.state.serverResponse == '')
+              {
+                return <></> 
+              }
+
+              if(this.state.serverResponse != '' && this.state.serverResponse.includes('Error'))
+              {
+                return <div className='registerform-message-wrapper'>
+                          <h5 className='registerform-error-message'>{this.state.serverResponse.split(':')[1]}</h5> </div>
+              }
+
+              if(this.state.serverResponse != '' && this.state.serverResponse.includes('token'))
+              {
+                return <div className='registerform-message-wrapper'>
+                          <h5 className='registerform-success-message'>Вашата регистрација е во тек. Потврдете на вашата е-маил адреса!</h5> </div>
+              }
+
+            })()}
 
              <div className="registerform-imgs-div">
                <div className="registerform-image-container">

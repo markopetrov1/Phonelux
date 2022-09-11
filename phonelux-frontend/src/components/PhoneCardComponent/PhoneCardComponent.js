@@ -23,7 +23,7 @@ export class PhoneCardComponent extends Component {
         <img src={this.props.image_url}/>
         <h3 className='phonecard-model-header'>{this.props.model}</h3>
         <h5 className='phonecard-lowestprice-header'>Најниска цена: <p className='phonecard-lowestprice'>{this.props.lowestPrice}</p> ден.</h5>
-        <h6 className='phonecard-totaloffers-header'>Вкупно понуди: <p className='phonecard-totaloffers'>{this.props.total_offers}</p></h6>
+        <h5 className='phonecard-totaloffers-header'>Вкупно понуди: <p className='phonecard-totaloffers'>{this.props.total_offers}</p></h5>
       </div>
       </Paper>
       </Link>

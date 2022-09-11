@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,8 +22,57 @@ public class PhoneService {
 
 
     // TODO: insert logic to filter
-    public List<Phone> getPhones(){
-        return phoneRepository.findAll();
+    public List<Phone> getPhones(String shops, String brands, String sortBy, String priceRange, String searchValue){
+        List<Phone> phones = phoneRepository.findAll();
+
+
+        if(brands != null)
+        {
+            phones = phones.stream()
+                    .filter(phone -> brands.contains(phone.getBrand())).collect(Collectors.toList());
+        }
+
+        if(shops != null)
+        {
+            phones = phones.stream()
+                    .filter(phone -> phone.getPhoneOffers().stream().anyMatch(offer -> shops.contains(offer.getOffer_shop())))
+                    .collect(Collectors.toList());
+        }
+
+        if(priceRange != null)
+        {
+            int lowestPrice = Integer.parseInt(priceRange.split("-")[0]);
+            int highestPrice = Integer.parseInt(priceRange.split("-")[1]);
+            phones = phones.stream()
+                    .filter(phone -> phone.getLowestPrice() >= lowestPrice && phone.getLowestPrice() <= highestPrice)
+                    .collect(Collectors.toList());
+        }
+
+        if(searchValue != null && !Objects.equals(searchValue.stripIndent(), "")){
+            phones = phones.stream()
+                    .filter(phone -> phone.getBrand().toLowerCase().contains(searchValue.stripIndent().toLowerCase())
+                            || phone.getModel().toLowerCase().contains(searchValue.stripIndent().toLowerCase()))
+                    .collect(Collectors.toList());
+        }
+
+        phones = phones.stream().sorted(Comparator.comparing(Phone::getTotal_offers).reversed())
+                .collect(Collectors.toList());
+        if(sortBy != null)
+        {
+            if(sortBy.equals("ascending")) {
+                phones = phones.stream()
+                        .sorted(Comparator.comparing(Phone::getLowestPrice))
+                        .collect(Collectors.toList());
+            }
+
+            if(sortBy.equals("descending")) {
+                phones = phones.stream()
+                        .sorted(Comparator.comparing(Phone::getLowestPrice).reversed())
+                        .collect(Collectors.toList());
+            }
+        }
+
+        return phones;
     }
 
     public List<String> getBrands(){

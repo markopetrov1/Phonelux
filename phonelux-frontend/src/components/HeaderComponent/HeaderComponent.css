@@ -7,4 +7,12 @@
 .header-component img{
     width: 310px;
     height: 200px;
+    margin-top: -65px;
+}
+
+.homepage-navbar-component{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: #B6E2C8;
 }

@@ -29,6 +29,16 @@ public class PhoneOfferService {
                 .stream().sorted(Comparator.comparing(PhoneOffer::getPrice)).collect(Collectors.toList());
     }
 
+    public PhoneOffer getPhoneOffer(Long offerId){
+        boolean exists = phoneOfferRepository.existsById(offerId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone offer with id "+offerId+" does not exist");
+
+        return phoneOfferRepository.findById(offerId).get();
+    }
+
+
     public List<String> getShops() {
         return phoneOfferRepository.findAll().stream()
                 .map(PhoneOffer::getOffer_shop)

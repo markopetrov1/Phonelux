@@ -16,6 +16,7 @@ export class LoginFormComponent extends Component {
     this.state = {
       email: '',
       password: '',
+      serverResponse: ''
     }
   }
   
@@ -41,11 +42,14 @@ export class LoginFormComponent extends Component {
       };
 
       axios(config)
-      .then(function (response) {
-        console.log(response.data);
+      .then((response) => {
+       // store access token in local storage, redirect to homepage
+       console.log(response.data)
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        this.setState({
+          serverResponse: 'error'
+        })
       });
 
   }
@@ -66,7 +70,8 @@ render() {
       <div className="loginform-main-div">
        <div className="loginform-sub-main-div">
          <div>
-
+          {this.state.serverResponse == 'error' ? <div className='loginform-message-wrapper'>
+                          <h5 className='loginform-error-message'>Невалидна е-маил адреса или лозинка!</h5></div> : <></>}
            <div className="loginform-imgs-div">
              <div className="loginform-image-container">
                <img src={profileIcon} alt="profile" className="loginform-profile-img"/>
@@ -92,7 +97,7 @@ render() {
             <button className='loginform-button' type="submit">Најави се</button>
             </div>  
            </form>
-           <p className='register-link'><Link to={"/register"}><a>Регистрирај се</a></Link></p>
+           <p className='register-link'><Link className='registerform-link' to={"/register"}>Регистрирај се</Link></p>
   
          </div>
          

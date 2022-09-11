@@ -1,0 +1,72 @@
+.phone-offer-details-main{
+    width: 100%;
+}
+
+.phone-offer-details-table th{
+    text-align: center;
+    font-size: 38px;
+    padding: 20px;
+}
+
+.phone-offer-details-table thead tr{
+    background-color: #a6c9ab;
+}
+
+.phone-offer-details-table-row:nth-of-type(even){
+    background-color: #eef2f0;
+}
+
+.phone-offer-details-table-row{
+    border: 1px solid gainsboro;
+
+}
+
+.phone-offer-details-table{
+    border-collapse: collapse;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.phone-offer-details-table-row td{
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.phone-offer-details-table-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.phone-offer-details-table-section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.phone-offer-details-table-row td a{
+    text-decoration: none;
+}
+
+.phone-offer-details-table-row td a:hover{
+    color: rgb(40, 117, 40);
+}
+
+.phone-offer-details-last-updated-header{
+    width: 25%;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid rgb(199, 193, 193);
+    background-color: #B6E2C8;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.phone-offer-details-last-updated-wrapper{
+    display: flex;
+    justify-content: start;
+}
+
+
