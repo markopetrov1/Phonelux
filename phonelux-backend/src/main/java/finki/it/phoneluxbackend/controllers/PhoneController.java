@@ -17,9 +17,7 @@ import java.util.stream.Collectors;
 @RequestMapping(path = "/")
 public class PhoneController {
     private final PhoneService phoneService;
-    private final PhoneOfferService phoneOfferService;
 
-//     handle request parameters for filtering phones
     @GetMapping(path = "/phones")
     public List<Phone> getPhones(@RequestParam(name = "shops", required = false) String shops,
                                  @RequestParam(name = "brands", required = false) String brands,
@@ -40,23 +38,5 @@ public class PhoneController {
     public List<String> getBrands(){
         return phoneService.getBrands();
     }
-
-    @GetMapping(path = "/shops")
-    public List<String> getShops(){
-        return phoneOfferService.getShops();
-    }
-
-    @GetMapping(path = "/lowestPrice")
-    public int getLowestPrice()
-    {
-        return phoneOfferService.getLowestPrice();
-    }
-
-    @GetMapping(path = "/highestPrice")
-    public int getHighestPrice()
-    {
-        return phoneOfferService.getHighestPrice();
-    }
-
 
 }

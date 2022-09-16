@@ -49,21 +49,14 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
                 .withIssuer(request.getRequestURL().toString())
                 .withClaim("role", user.getAuthorities().stream()
                         .map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
+                .withClaim("name", user.getFirstName())
+                .withClaim("id", user.getId())
                 .sign(algorithm);
 
-//        String refresh_token = JWT.create()
-//                .withSubject(user.getEmail())
-//                .withExpiresAt(new Date(System.currentTimeMillis() + 30 * 60 * 1000))
-//                .withIssuer(request.getRequestURL().toString())
-//                .withClaim("role",user.getAuthorities().stream()
-//                        .map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
-//                .sign(algorithm);
 
-
-        Map<String,String> tokens = new HashMap<>();
-        tokens.put("access_token",access_token);
-//        tokens.put("refresh_token",refresh_token);
+        Map<String,String> authInfo = new HashMap<>();
+        authInfo.put("access_token",access_token);
         response.setContentType(APPLICATION_JSON_VALUE);
-        new ObjectMapper().writeValue(response.getOutputStream(),tokens);
+        new ObjectMapper().writeValue(response.getOutputStream(),authInfo);
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -59,4 +60,19 @@ public class PhoneOfferService {
                 .collect(Collectors.toList()).get(0).getPrice();
     }
 
+    public List<PhoneOffer> getCheaperOffers(Long offerId) {
+        boolean exists = phoneOfferRepository.existsById(offerId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone offer with id "+offerId+" does not exist");
+
+        PhoneOffer offer = phoneOfferRepository.findById(offerId).get();
+
+        return phoneOfferRepository.findAll()
+                .stream().filter(phoneOffer ->
+                        Objects.equals(phoneOffer.getPhone().getModel(), offer.getPhone().getModel())
+                                && phoneOffer.getPrice() < offer.getPrice())
+                .sorted(Comparator.comparing(PhoneOffer::getPrice).reversed())
+                .collect(Collectors.toList());
+    }
 }

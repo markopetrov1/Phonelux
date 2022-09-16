@@ -1,5 +1,6 @@
 package finki.it.phoneluxbackend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import finki.it.phoneluxbackend.data.UserRole;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@ToString
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
@@ -47,6 +49,7 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "offer_id")
     )
+    @JsonIgnore
     private List<PhoneOffer> favouriteOffers = new ArrayList<PhoneOffer>();
 
     public User(String firstName, String lastName, String email, String password, UserRole userRole) {
@@ -54,6 +57,20 @@ public class User implements UserDetails {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.userRole = userRole;
+    }
+
+    public User(Long id, String firstName, UserRole userRole) {
+        this.id = id;
+        this.firstName = firstName;
+        this.userRole = userRole;
+    }
+
+    public User(Long id, String firstName, String lastName, String email, UserRole userRole) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
         this.userRole = userRole;
     }
 

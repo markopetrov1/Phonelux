@@ -17,7 +17,6 @@ import java.util.List;
 @AllArgsConstructor
 public class PhoneOfferController {
     private final PhoneOfferService phoneOfferService;
-    private final PhoneService phoneService;
 
     @GetMapping(path = "/phones/offers/{phoneId}")
     public List<PhoneOffer> getOffersForPhone(@PathVariable("phoneId") Long phoneId){
@@ -27,6 +26,28 @@ public class PhoneOfferController {
     @GetMapping(path = "/phoneoffer/{offerId}")
     public PhoneOffer getPhoneOffer(@PathVariable("offerId") Long offerId){
         return phoneOfferService.getPhoneOffer(offerId);
+    }
+
+    @GetMapping(path = "/phoneoffer/{offerId}/cheaperoffers")
+    public List<PhoneOffer> getCheaperOffers(@PathVariable("offerId") Long offerId){
+        return phoneOfferService.getCheaperOffers(offerId);
+    }
+
+    @GetMapping(path = "/shops")
+    public List<String> getShops(){
+        return phoneOfferService.getShops();
+    }
+
+    @GetMapping(path = "/lowestPrice")
+    public int getLowestPrice()
+    {
+        return phoneOfferService.getLowestPrice();
+    }
+
+    @GetMapping(path = "/highestPrice")
+    public int getHighestPrice()
+    {
+        return phoneOfferService.getHighestPrice();
     }
 
 }
