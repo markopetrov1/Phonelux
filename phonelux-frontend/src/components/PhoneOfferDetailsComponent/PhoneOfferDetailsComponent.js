@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import './PhoneOfferDetailsComponent.css'
 import HeaderComponent from '../HeaderComponent/HeaderComponent'
+import UserContext from '../../context/UserContext'
+import { Link } from 'react-router-dom'
 
 
 export class PhoneOfferDetailsComponent extends Component {
@@ -25,13 +27,18 @@ export class PhoneOfferDetailsComponent extends Component {
     }
 
   render() {
-    console.log(this.state)
     return (
       <div className='phone-offer-details-main'>
         <HeaderComponent/>
         <div className='phone-offer-details-last-updated-wrapper'>
           <h3 className='phone-offer-details-last-updated-header'>Последно ажурирана: {this.state.offer == null || 
           this.state.offer.last_updated == null ? '#' : this.state.offer.last_updated.split('T')[0]}</h3>
+          {
+            localStorage.getItem('token') && (this.context.role == 'ADMIN' || this.context.role == 'SUPERADMIN') ?
+            <Link className='link-offer-edit' style={{color:'black'}} to={'/admin/editoffer/'+this.state.offerId}>
+              <h3 className='phone-offer-details-edit-header'>Измени понуда</h3>
+              </Link> : <></>
+          }
         </div>
         <div className='phone-offer-details-table-wrapper'>
         <div className='phone-offer-details-table-section'>
@@ -114,5 +121,7 @@ export class PhoneOfferDetailsComponent extends Component {
     )
   }
 }
+
+PhoneOfferDetailsComponent.contextType = UserContext
 
 export default PhoneOfferDetailsComponent

@@ -8,6 +8,7 @@
     width: 310px;
     height: 200px;
     margin-top: -65px;
+    cursor: pointer;
 }
 
 .homepage-navbar-component{

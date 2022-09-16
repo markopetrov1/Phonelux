@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import PhoneOfferComponent from '../PhoneOfferComponent/PhoneOfferComponent'
 import './PhoneWithOffersComponent.css'
 import phoneImg from '../../images/phone.png'
+import UserContext from '../../context/UserContext'
+
 
 export class PhoneWithOffersComponent extends Component {
 
@@ -11,7 +13,8 @@ export class PhoneWithOffersComponent extends Component {
       super(props)
     
       this.state = {
-         phone_offers: []
+         phone_offers: [],
+         loggedUserFavouriteOffers: []
       }
     }
 
@@ -20,8 +23,31 @@ export class PhoneWithOffersComponent extends Component {
       .then(response => {
           this.setState({
               phone_offers: response.data
-          })
+          }, this.getFavouriteOffersForLoggedUser)
       }).catch(error => console.log(error))
+    }
+
+    getFavouriteOffersForLoggedUser = () => {
+      if(localStorage.getItem('token'))
+      {
+        var config = {
+          method: 'get',
+          url: '/user/'+this.context.userId+'/favouriteoffers',
+          headers: { 
+            'Authorization': 'Bearer '+localStorage.getItem('token')
+          }
+        };
+        
+        axios(config)
+        .then(response => {
+          this.setState({
+            loggedUserFavouriteOffers: response.data
+          })
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      }
     }
 
   render() {
@@ -59,7 +85,8 @@ export class PhoneWithOffersComponent extends Component {
               {
                 this.state.phone_offers.map((offer,idx) => <PhoneOfferComponent key={idx} id={offer.id}
                 is_validated={offer.is_validated} offer_shop={offer.offer_shop} offer_name={offer.offer_name}
-                price={offer.price} offer_url={offer.offer_url}
+                price={offer.price} offer_url={offer.offer_url} loggedUserFavouriteOffers={this.state.loggedUserFavouriteOffers}
+                getFavouriteOffersForLoggedUser={this.getFavouriteOffersForLoggedUser}
                 />) 
               }
             </tbody>
@@ -71,5 +98,7 @@ export class PhoneWithOffersComponent extends Component {
     )
   }
 }
+
+PhoneWithOffersComponent.contextType = UserContext
 
 export default PhoneWithOffersComponent

@@ -26,3 +26,11 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     transition: box-shadow 0.5s, background-color 0.5s ;
 }
+
+.phone-offer-favouriteoffer-icon:hover{
+    cursor: pointer;
+}
+
+.phone-offer-cheaperoffers-icon{
+    cursor: pointer;
+}

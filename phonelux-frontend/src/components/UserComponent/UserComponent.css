@@ -1,0 +1,29 @@
+.superadmin-addadmin-button{
+    font-size: 15px;
+    background-color: #B6E2C8;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.superadmin-addadmin-button:hover{
+    cursor: pointer;
+    background-color: rgb(166, 201, 171);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+
+.superadmin-removeadmin-button{    
+    font-size: 15px;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: rgb(243, 203, 203);
+}
+
+.superadmin-removeadmin-button:hover{
+    cursor: pointer;
+    background-color: rgb(228, 179, 179);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}

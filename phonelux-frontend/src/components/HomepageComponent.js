@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserContext from '../context/UserContext'
 import GroupedFiltersComponent from './GroupedFiltersComponent/GroupedFiltersComponent'
 import HeaderComponent from './HeaderComponent/HeaderComponent'
 import PhoneCardGridComponent from './PhoneCardGridComponent/PhoneCardGridComponent'
@@ -48,7 +49,7 @@ changeFilters = (e) => {
     })
 
   }
-
+  
   if(e.hasOwnProperty('sortBy'))
   {
     this.setState({
@@ -59,6 +60,8 @@ changeFilters = (e) => {
 
 
   render() {
+    console.log(this.context)
+    console.log(localStorage.getItem('token'))
     return (
         <>
         <HeaderComponent/>
@@ -68,5 +71,8 @@ changeFilters = (e) => {
     )
   }
 }
+
+HomepageComponent.contextType = UserContext
+
 
 export default HomepageComponent

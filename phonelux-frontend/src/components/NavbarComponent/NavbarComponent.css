@@ -8,9 +8,24 @@
     margin-top: 10px;
 }
 
+.navbar-logout-box-icon{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
 .navbar-account-box-icon:hover{
     cursor: pointer;
 }
 
+.navbar-logout-box-icon:hover{
+    cursor: pointer;
+}
 
-/* style={{ fontSize: '50px', marginTop: '10px' }} */
+.navbar-favouriteoffers-icon:hover{
+    cursor: pointer;
+}
+
+.navbar-superadmin-icon:hover{
+    cursor: pointer;
+}
+

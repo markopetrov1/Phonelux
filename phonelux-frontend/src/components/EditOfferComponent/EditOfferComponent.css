@@ -1,0 +1,69 @@
+.edit-offer-table th{
+    text-align: center;
+    font-size: 38px;
+    padding: 20px;
+}
+
+.edit-offer-component-main{
+    width: 100%;
+}
+
+.edit-offer-table thead tr{
+    background-color: #a6c9ab;
+}
+
+.edit-offer-table-row:nth-of-type(even){
+    background-color: #eef2f0;
+}
+
+.edit-offer-table-row{
+    border: 1px solid gainsboro;
+}
+
+.edit-offer-table{
+    border-collapse: collapse;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.edit-offer-table-row td{
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.edit-offer-table-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.edit-offer-textarea{
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 22px;
+}
+
+.edit-offer-price-input{
+    width: 20%;
+    font-size: 22px;
+    background-color: rgb(238, 240, 238);
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.edit-offer-price-span{
+    margin-left: 10px;
+}
+
+.edit-offer-table-textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: rgb(230, 232, 230);
+    font-size: 22px;
+}

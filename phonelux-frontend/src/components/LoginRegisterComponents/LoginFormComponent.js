@@ -6,8 +6,6 @@ import InputFormComponent from './InputFormComponent';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-
-
 export class LoginFormComponent extends Component {
 
   constructor(props) {
@@ -43,8 +41,10 @@ export class LoginFormComponent extends Component {
 
       axios(config)
       .then((response) => {
+        const {access_token} = response.data
        // store access token in local storage, redirect to homepage
-       console.log(response.data)
+      localStorage.setItem('token', access_token)
+      window.location.href="/"
       })
       .catch((error) => {
         this.setState({
@@ -63,8 +63,6 @@ export class LoginFormComponent extends Component {
   
 
 render() {
-
-  const {email,password} = this.state
 
   return (
       <div className="loginform-main-div">
@@ -106,5 +104,6 @@ render() {
     );
 }
 }
+
 
 export default LoginFormComponent

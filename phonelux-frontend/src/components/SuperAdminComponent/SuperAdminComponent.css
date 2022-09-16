@@ -1,0 +1,56 @@
+.superadmin-section-header{
+    background-color: #B6E2C8;
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+.superadmin-section-header-text{
+    width: fit-content;
+}
+
+.superadmin-section-table-row:nth-of-type(even){
+    background-color: #eef2f0;
+}
+
+.superadmin-section-table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.superadmin-section-table-row{
+    border: 1px solid gainsboro;
+    padding: 20px ;
+    font-size: 18px;
+}
+
+.superadmin-section-table td{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.superadmin-section-table-head{
+    background-color: #a6c9ab;
+    font-size: 22px;
+}
+
+.superadmin-section-table-head th{
+    word-wrap: break-word;
+    width: 100%;
+}
+.search-user-field{
+    /* display: flex;
+    height: fit-content;
+    border-radius: 20px; */
+    border: 1px solid rgb(131, 125, 125);
+    width: 100%;
+}
+
+.search-user-input{
+margin:5px;
+width: 100%;
+}
+

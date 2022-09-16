@@ -1,0 +1,13 @@
+.user-favourite-offers-header{
+    background-color: #B6E2C8;
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+.user-favourite-offers-header-text{
+    width: fit-content;
+}
+

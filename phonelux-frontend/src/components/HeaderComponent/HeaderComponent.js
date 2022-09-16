@@ -5,6 +5,11 @@ import NavbarComponent from '../NavbarComponent/NavbarComponent'
 import './HeaderComponent.css'
 
 export default class HeaderComponent extends Component {
+
+
+  redirectToHomepage = () =>{
+    window.location.href = "/"
+  }
   render() {
     return (
       <>
@@ -12,9 +17,9 @@ export default class HeaderComponent extends Component {
         <NavbarComponent/>
       </div>
       <div className='header-component'>
-          <Link style={{ textDecoration: 'none' }} to={"/"}>
-        <img src={logo}></img>
-        </Link>
+          {/* <Link style={{ textDecoration: 'none' }} to={"/"}> */}
+        <img className='phonelux-logo' onClick={this.redirectToHomepage} src={logo}></img>
+        {/* </Link> */}
       </div>
       </>
     )
