@@ -14,9 +14,10 @@ export class FilterSelectComponent extends React.Component {
 
     constructor(props) {
       super(props)
-        
+        const {type} = this.props
+        console.log(type)
       this.state = {
-         pickedItems: [],
+         pickedItems: localStorage.getItem(type) ? localStorage.getItem(type).split(',') : [],
          items: [],
          type: '',
          ITEM_HEIGHT: 48,
@@ -36,20 +37,89 @@ export class FilterSelectComponent extends React.Component {
             },
         }
 
-
         let endpoint 
-        if(this.props.type == 'brands')
-        {
-          endpoint = '/brands'
+        switch (this.props.type) {
+
+          case 'brands':
+            endpoint = '/brands'
           this.setState({
             type: 'Брендови'
           })
-        }
-        else{
-          endpoint = '/shops'
+            break;
+          case 'shops':
+            endpoint = '/shops'
           this.setState({
             type: 'Продавници'
           })
+            break;
+
+          case 'ram':
+            endpoint = '/specifications/ram'
+          this.setState({
+            type: 'РАМ меморија'
+          })
+            break;
+
+          case 'rom':
+            endpoint = '/specifications/rom'
+          this.setState({
+            type: 'РОМ меморија'
+          })
+            break;
+
+           case 'frontcamera':
+            endpoint = '/specifications/frontcamera'
+          this.setState({
+            type: 'Предна камера'
+          })
+            break;
+
+           case 'backcamera':
+            endpoint = '/specifications/backcamera'
+          this.setState({
+            type: 'Задна камера'
+          })
+            break;
+
+             case 'chipset':
+            endpoint = '/specifications/chipset'
+          this.setState({
+            type: 'Чипсет'
+          })
+            break;
+
+           case 'cpu':
+            endpoint = '/specifications/cpu'
+          this.setState({
+            type: 'Процесор'
+          })
+            break;
+
+
+         case 'operatingsystem':
+            endpoint = '/specifications/operatingsystem'
+          this.setState({
+            type: 'Оперативен систем'
+          })
+            break;
+
+
+         case 'color':
+            endpoint = '/specifications/color'
+          this.setState({
+            type: 'Боја'
+          })
+            break;
+
+            case 'battery':
+              endpoint = '/specifications/battery'
+            this.setState({
+              type: 'Батерија'
+            })
+              break;
+
+          default:
+            break;
         }
 
         axios.get(endpoint)
@@ -62,24 +132,84 @@ export class FilterSelectComponent extends React.Component {
         this.setState({
             pickedItems: typeof value === 'string' ? value.split(',') : value
         }, ()=>{
-          if(this.props.type == 'brands')
-          {
-            this.props.changeHandler({brands: this.state.pickedItems.join(',')})
+
+          switch (this.props.type) {
+            case 'brands':
+              this.props.changeHandler({brands: this.state.pickedItems.join(',')})
+              localStorage.setItem('brands', this.state.pickedItems.join(','))
+              break;
+
+            case 'shops':
+              this.props.changeHandler({shops: this.state.pickedItems.join(',')})
+              localStorage.setItem('shops', this.state.pickedItems.join(','))
+              break;
+
+            case 'ram':
+              this.props.changeHandler({ram: this.state.pickedItems.join(',')})
+              localStorage.setItem('ram', this.state.pickedItems.join(','))
+              break;
+            case 'rom':
+              this.props.changeHandler({rom: this.state.pickedItems.join(',')})
+              localStorage.setItem('rom', this.state.pickedItems.join(','))
+              break;
+            case 'frontcamera':
+              this.props.changeHandler({frontcamera: this.state.pickedItems.join(',')})
+              localStorage.setItem('frontcamera', this.state.pickedItems.join(','))
+              break;
+
+            case 'backcamera':
+              this.props.changeHandler({backcamera: this.state.pickedItems.join(',')})
+              localStorage.setItem('backcamera', this.state.pickedItems.join(','))
+              break;
+
+            case 'chipset':
+              this.props.changeHandler({chipset: this.state.pickedItems.join(',')})
+              localStorage.setItem('chipset', this.state.pickedItems.join(','))
+              break;
+
+            case 'cpu':
+              this.props.changeHandler({cpu: this.state.pickedItems.join(',')})
+              localStorage.setItem('cpu', this.state.pickedItems.join(','))
+              break;
+
+            case 'operatingsystem':
+              this.props.changeHandler({operatingsystem: this.state.pickedItems.join(',')})
+              localStorage.setItem('operatingsystem', this.state.pickedItems.join(','))
+              break;
+
+            case 'color':
+              this.props.changeHandler({color: this.state.pickedItems.join(',')})
+              localStorage.setItem('color', this.state.pickedItems.join(','))
+              break;
+
+            case 'battery':
+              this.props.changeHandler({battery: this.state.pickedItems.join(',')})
+              localStorage.setItem('battery', this.state.pickedItems.join(','))
+              break;
+
+            default:
+              break;
           }
+          // if(this.props.type == 'brands')
+          // {
+          //   this.props.changeHandler({brands: this.state.pickedItems.join(',')})
+          // }
           
-          if(this.props.type == 'shops')
-          {
-            this.props.changeHandler({shops: this.state.pickedItems.join(',')})
-          }
+          // if(this.props.type == 'shops')
+          // {
+          //   this.props.changeHandler({shops: this.state.pickedItems.join(',')})
+          // }
           
         })
-      };
 
+
+      };
+    // sx={{ m: 1, width: 250 }} kaj formcontrol
 
   render() {
     return (
         <div>
-        <FormControl className="form-select-component" sx={{ m: 1, width: 200 }}>
+        <FormControl className="form-select-component" sx={{ m: 1, width: this.props.width}}>
           <InputLabel className="input-select-label">{this.state.type}</InputLabel>
           <Select
             size={"small"}
@@ -93,9 +223,9 @@ export class FilterSelectComponent extends React.Component {
             MenuProps={this.state.MenuProps}
   >
             {this.state.items.map((item) => (
-              <MenuItem key={item} value={item}>
+              <MenuItem key={item} value={item} > 
                 <Checkbox checked={this.state.pickedItems.indexOf(item) > -1} />
-                <ListItemText primary={item} />
+                <ListItemText className='list-item-text-filters' primary={item} />
               </MenuItem>
             ))}
           </Select>

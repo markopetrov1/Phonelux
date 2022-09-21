@@ -6,3 +6,7 @@
     border-radius: 20px;
 
 }
+
+.list-item-text-filters span{
+    overflow-x: scroll;
+}

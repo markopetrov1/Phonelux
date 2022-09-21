@@ -28,11 +28,11 @@ export default class GroupedFiltersComponent extends Component {
         <Grid container spacing={5}>
 
           <Grid className='filterscomponent-grid-item' item xs={6} sm={4} md={3}>
-            <FilterSelectComponent changeHandler={this.props.passFilters} type='shops'/>
+            <FilterSelectComponent width={200} changeHandler={this.props.passFilters} type='shops'/>
           </Grid>
 
           <Grid className='filterscomponent-grid-item' item xs={6} sm={4} md={3}>
-            <FilterSelectComponent changeHandler={this.props.passFilters} type='brands'/>
+            <FilterSelectComponent width={200} changeHandler={this.props.passFilters} type='brands'/>
           </Grid>
 
           <Grid className='filterscomponent-grid-item' item xs={6} sm={4} md={3}>

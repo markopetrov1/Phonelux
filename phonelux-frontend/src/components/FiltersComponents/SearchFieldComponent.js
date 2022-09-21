@@ -62,7 +62,7 @@ export default class SearchFieldComponent extends Component {
     super(props)
   
     this.state = {
-       
+
     }
   }
 

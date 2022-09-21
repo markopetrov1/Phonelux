@@ -11,8 +11,7 @@ export class UserProvider extends Component {
       this.state = {
          userId: '',
          name: '',
-         role: '',
-         userFavouriteOffers: []
+         role: ''
       }
     }
 
@@ -27,43 +26,19 @@ export class UserProvider extends Component {
                 userId: id,
                 name: firstName,
                 role: userRole
-             }, this.updateUserFavouriteOffers)
+             })
             }).catch(error => console.log(error))
         }
     }
-
-    // updateUserFavouriteOffers = () =>{
-    //   var config = {
-    //     method: 'get',
-    //     url: '/user/'+this.state.userId+'/favouriteoffers',
-    //     headers: { 
-    //       'Authorization': 'Bearer '+localStorage.getItem('token')
-    //     }
-    //   };
-
-    //   axios(config)
-    //   .then(response => {
-    //     this.setState({
-    //       userFavouriteOffers: response.data
-    //     })
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
-    // }
-
-
+    
     
   render() {
-    const {userId,name,role, userFavouriteOffers} = this.state
-    // const {updateUserFavouriteOffers} = this
+    const {userId,name,role} = this.state
     return (
       <UserContext.Provider value={{
         userId,
         name,
-        role,
-        // userFavouriteOffers,
-        // updateUserFavouriteOffers
+        role
       }}>
         {this.props.children}
       </UserContext.Provider>

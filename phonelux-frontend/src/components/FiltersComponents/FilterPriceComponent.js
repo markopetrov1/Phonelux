@@ -10,7 +10,8 @@ export class FilterPriceComponent extends React.Component {
     super(props)
   
     this.state = {
-      value: [1000,150000],
+      value: localStorage.getItem('priceRange') ? [parseInt(localStorage.getItem('priceRange').split('-')[0]), 
+      parseInt(localStorage.getItem('priceRange').split('-')[1])] : [1000,150000],
       minValue: 0,
       maxValue: 0
     }
@@ -38,6 +39,7 @@ export class FilterPriceComponent extends React.Component {
 
   handleChange = () => {
     this.props.changeHandler({priceRange: this.state.value.join('-')})
+    localStorage.setItem('priceRange',this.state.value.join('-'))
   }
 
 

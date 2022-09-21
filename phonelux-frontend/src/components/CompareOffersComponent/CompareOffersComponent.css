@@ -1,0 +1,72 @@
+.compare-offers-header{
+    background-color: #B6E2C8;
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+.compare-offers-header-text{
+    width: fit-content;
+}
+
+.compare-offers-table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+.compare-offers-table-row:nth-of-type(even){
+    background-color: #eef2f0;
+}
+
+.compare-offers-table-row{
+    border: 1px solid gainsboro;
+    padding: 20px ;
+}
+
+.compare-offers-table td{
+    text-align: center;
+    border: 1px solid gainsboro;
+    word-wrap: break-word;
+}
+
+
+.compare-offers-table-row td a{
+    text-decoration: none;
+}
+
+.compare-offers-table th{
+    background-color: #afd3b4
+}
+
+.no-offers-saved-message{
+    background-color: #afd3b4;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+.compare-offer-table-headers{
+    width: 200px;
+}
+
+
+.compare-offers-top-headers{
+    background-color: #afd3b4;
+    font-weight: bold;
+}
+.compare-offers-top-headers:hover{
+    cursor: pointer;
+    background-color: rgb(203, 56, 56);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+

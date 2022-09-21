@@ -66,4 +66,52 @@
     min-height: 100px;
     background-color: rgb(230, 232, 230);
     font-size: 22px;
+    text-align: center;
+    
+}
+
+.edit-offer-submit-button{
+    font-size: 20px;
+    padding: 10px;
+    background-color: #B6E2C8;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 20%;
+    margin-bottom: 50px;
+    margin-right: 130px;
+}
+
+
+.edit-offer-submit-button:hover{
+    cursor: pointer;
+    background-color: rgb(166, 201, 171);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+
+.edit-offer-button-wrapper{
+    margin-top: -25px;
+    display: flex;
+    justify-content: end;
+}
+
+.edit-offer-offerimage{
+    width: 40%;
+    height: 40%;
+    display: block;
+}
+
+.edit-offer-imageurl-input{
+    width: 80%;
+    font-size: 22px;
+    background-color: rgb(238, 240, 238);
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.edit-offer-offerimage-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }

@@ -1,6 +1,6 @@
 .sortby-component-wrapper{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 20px;
     background-color: #DEE4E1
 }
@@ -10,4 +10,12 @@
     width: 15%;
     background-color: #e6f8ef;
     margin-right: 15px;
+    height: 50%;
+    margin-left: auto;
+}
+
+
+.popover-specification-container{
+    height: 500px;
+    overflow-y: scroll;
 }

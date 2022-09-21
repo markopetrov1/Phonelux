@@ -11,6 +11,13 @@ export class LoginPageComponent extends Component {
          
       }
     }
+
+    componentDidMount(){
+      if(localStorage.getItem('token'))
+      {
+        window.location.href = "/"
+      }
+    }
     
 
   render() {

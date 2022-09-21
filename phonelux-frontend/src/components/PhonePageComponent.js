@@ -17,6 +17,7 @@ export class PhonePageComponent extends Component {
     componentDidMount(){
         axios.get('/phones/'+this.state.phoneId)
         .then(response => {
+          console.log(response.data)
             this.setState({
                 phone: response.data
             })

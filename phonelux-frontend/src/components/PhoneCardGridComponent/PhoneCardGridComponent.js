@@ -5,6 +5,7 @@ import '../PhoneCardComponent/PhoneCardComponent'
 import PhoneCardComponent from '../PhoneCardComponent/PhoneCardComponent'
 import './PhoneCardGridComponent.css'
 import phoneImage from '../../images/phone.png'
+import SortByComponent from '../FiltersComponents/SortByComponent'
 
 export class PhoneCardGridComponent extends Component {
 
@@ -19,6 +20,32 @@ export class PhoneCardGridComponent extends Component {
       currentPhones: []
     }
 
+  }
+
+
+  getQueryString = () => {
+    let filters = '?'
+    if(localStorage.getItem('shops'))
+      {
+        filters += 'shops='+localStorage.getItem('shops')+'&'
+      }
+      if(localStorage.getItem('brands'))
+      {
+        filters += 'brands='+localStorage.getItem('brands')+'&'
+      }
+      if(localStorage.getItem('priceRange'))
+      {
+        filters += 'priceRange='+localStorage.getItem('priceRange')+'&'
+      }
+
+      if(localStorage.getItem('sortBy'))
+      {
+        filters += 'sortBy='+localStorage.getItem('sortBy')+'&'
+      } 
+
+      // dodaj filtri za specifikacija i sredi go sortBy
+
+      return filters
   }
 
   componentDidUpdate(prevProps) {
@@ -45,7 +72,11 @@ export class PhoneCardGridComponent extends Component {
       if(this.props.sortBy)
       {
         filters += 'sortBy='+this.props.sortBy+'&'
-      }
+      } 
+
+      // dodaj gi i filtrite za specifikacija
+
+      // izdvoj metod da ti pravi querystring
 
       axios.get('/phones'+filters)
       .then(response => {
@@ -61,7 +92,7 @@ export class PhoneCardGridComponent extends Component {
   }
 
   componentDidMount() {
-    axios.get('/phones')
+    axios.get('/phones'+this.getQueryString())
       .then(response => {
         this.setState({
           phones: response.data,

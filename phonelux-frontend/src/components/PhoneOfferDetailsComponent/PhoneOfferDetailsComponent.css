@@ -55,10 +55,10 @@
 
 .phone-offer-details-last-updated-header{
     width: 25%;
-    margin-left: 20px;
+    margin-left: 5%;
     padding: 10px;
     border: 1px solid rgb(199, 193, 193);
-    background-color: #B6E2C8;
+    background-color: #dadedc;
     border-radius: 50px;
     text-align: center;
 }
@@ -72,7 +72,7 @@
 
 .phone-offer-details-edit-header{
     width: 100%;
-    margin-left: 20px;
+    margin-left: 5%;
     padding-top: 10px;
     border: 1px solid black;
     background-color:  rgb(232, 243, 121);
@@ -93,6 +93,41 @@
     height: fit-content;
     text-decoration: none;
     display: flex;
+}
+
+.validate-offer-button{
+    font-size: 17px;
+    padding: 10px;
+    background-color:  rgb(170, 211, 240);
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: 10%;
+    width: 15%;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.validate-offer-button:hover{
+    cursor: pointer;
+    background-color: rgb(149, 187, 215);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+
+.offer-valid-header{
+    font-size: 17px;
+    padding: 10px;
+    background-color: #96d5b0;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: 10%;
+    text-align: center;
+    width: 15%;
+    font-weight: bold;
+    font-size: 19px;
 }
 
 

@@ -3,7 +3,9 @@ import axios from 'axios'
 import './PhoneOfferDetailsComponent.css'
 import HeaderComponent from '../HeaderComponent/HeaderComponent'
 import UserContext from '../../context/UserContext'
+import CheckIcon from '@mui/icons-material/Check';
 import { Link } from 'react-router-dom'
+import Tippy from '@tippyjs/react'
 
 
 export class PhoneOfferDetailsComponent extends Component {
@@ -18,7 +20,11 @@ export class PhoneOfferDetailsComponent extends Component {
     }
 
     componentDidMount(){
-        axios.get('/phoneoffer/'+this.state.offerId)
+        this.getPhoneOffer()
+    }
+
+    getPhoneOffer = () => {
+      axios.get('/phoneoffer/'+this.state.offerId)
         .then(response => {
             this.setState({
                 offer: response.data
@@ -26,7 +32,26 @@ export class PhoneOfferDetailsComponent extends Component {
         }).catch(error => console.log(error))
     }
 
+    validateOffer = () => {
+      var config = {
+        method: 'put',
+        url: '/admin/validateoffer/'+this.state.offerId,
+        headers: { 
+          'Authorization': 'Bearer '+localStorage.getItem('token')
+        }
+      };
+      
+      axios(config)
+      .then(response => {
+        this.getPhoneOffer();
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    }
+
   render() {
+    console.log(this.state)
     return (
       <div className='phone-offer-details-main'>
         <HeaderComponent/>
@@ -39,7 +64,25 @@ export class PhoneOfferDetailsComponent extends Component {
               <h3 className='phone-offer-details-edit-header'>Измени понуда</h3>
               </Link> : <></>
           }
+       
+
+          {(() => {
+            if(this.state.offer != null && this.state.offer.is_validated)
+            {
+              return <Tippy placement='bottom'  content='Понудата е валидна'>
+                      <CheckIcon className='offer-valid-check-icon' style={{'fontSize': '60px'}}></CheckIcon>
+                     </Tippy>
+            }
+
+            if(this.state.offer != null && !this.state.offer.is_validated && 
+              (this.context.role == 'ADMIN' || this.context.role == 'SUPERADMIN'))
+            {
+              return <button onClick={this.validateOffer} className='validate-offer-button'>Валидирај понуда</button>
+            }
+
+          })()}
         </div>
+        <div className='phone-offer-details-last-updated-wrapper'></div>
         <div className='phone-offer-details-table-wrapper'>
         <div className='phone-offer-details-table-section'>
         <table className='phone-offer-details-table'>

@@ -10,6 +10,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import StarsIcon from '@mui/icons-material/Stars';
 import UserContext from '../../context/UserContext';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 export class NavbarComponent extends Component {
 
@@ -34,6 +35,14 @@ export class NavbarComponent extends Component {
           <Tippy placement='bottom' content='Менаџмент со корисници'>
             <Link style={{color: 'black'}} to={"/management/users"}>
               <SupervisorAccountIcon style={{fontSize: '40px', marginTop: '10px', marginRight: '10px' }} className='navbar-superadmin-icon'/>
+            </Link>
+          </Tippy> : <></>
+        }
+        {
+          localStorage.getItem('token')  ? 
+          <Tippy placement='bottom' content='Споредба на мобилни телефони'>
+            <Link style={{color: 'black'}} to={"/compareoffers"}>
+              <PhoneIphoneIcon style={{fontSize: '40px', marginTop: '10px', marginRight: '10px' }} className='navbar-comparephone-icon'/>
             </Link>
           </Tippy> : <></>
         }

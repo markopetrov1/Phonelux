@@ -34,3 +34,27 @@
 .phone-offer-cheaperoffers-icon{
     cursor: pointer;
 }
+
+.phone-offer-compare-icon:hover{
+    cursor: pointer;
+}
+
+.phone-offer-remove-favouriteoffer-icon:hover{
+    cursor: pointer;
+}
+
+.phone-offer-remove-favouriteoffer-icon{
+    color: rgb(226, 213, 39);
+}
+
+.phone-offer-compare-selected-icon:hover{
+    cursor: pointer;
+}
+
+.phone-offer-compare-selected-icon{
+    color: rgb(226, 213, 39);
+}
+
+
+
+

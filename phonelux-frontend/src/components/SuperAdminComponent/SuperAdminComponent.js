@@ -7,6 +7,7 @@ import UserComponent from '../UserComponent/UserComponent'
 import "./SuperAdminComponent.css"
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import UserContext from '../../context/UserContext';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -67,6 +68,15 @@ export class SuperAdminComponent extends Component {
     }
 
     componentDidMount(){
+      // if(!localStorage.getItem('token'))
+      // {
+      //     window.location.href = "/"
+      // }
+
+      // if(this.context.role != 'SUPERADMIN')
+      // {
+      //     window.location.href = "/"
+      // }
       this.getUsers()
     }
 
@@ -197,5 +207,7 @@ export class SuperAdminComponent extends Component {
     )
   }
 }
+
+SuperAdminComponent.contextType = UserContext
 
 export default SuperAdminComponent

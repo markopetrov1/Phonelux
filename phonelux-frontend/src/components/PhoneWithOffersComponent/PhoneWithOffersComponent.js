@@ -21,6 +21,7 @@ export class PhoneWithOffersComponent extends Component {
     componentDidMount(){
       axios.get('/phones/offers/'+this.props.phoneId)
       .then(response => {
+        console.log(response.data)
           this.setState({
               phone_offers: response.data
           }, this.getFavouriteOffersForLoggedUser)
