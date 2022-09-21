@@ -6,10 +6,7 @@ import finki.it.phoneluxbackend.services.PhoneOfferService;
 import finki.it.phoneluxbackend.services.PhoneService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +18,16 @@ public class PhoneOfferController {
     @GetMapping(path = "/phones/offers/{phoneId}")
     public List<PhoneOffer> getOffersForPhone(@PathVariable("phoneId") Long phoneId){
         return phoneOfferService.getPhoneOffersForPhone(phoneId);
+    }
+
+    @GetMapping(path = "/multipleoffers")
+    public List<PhoneOffer> getPhoneOffer(@RequestParam("offerIds") String offerIds){
+        return phoneOfferService.getMultiplePhoneOffers(offerIds);
+    }
+
+    @GetMapping(path = "/phoneoffer/shop/{shop}")
+    public List<PhoneOffer> getOffersFromShop(@PathVariable("shop") String shop){
+        return phoneOfferService.getOffersFromShop(shop);
     }
 
     @GetMapping(path = "/phoneoffer/{offerId}")

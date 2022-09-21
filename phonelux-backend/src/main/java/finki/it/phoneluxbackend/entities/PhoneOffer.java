@@ -13,6 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
 @Entity(name = "PhoneOffer")
 @Table(name = "phone_offers")
 public class PhoneOffer {
@@ -75,6 +76,7 @@ public class PhoneOffer {
     private String offer_shop_code;
 
     @ManyToMany(mappedBy = "favouriteOffers")
+    @JsonIgnore
     private List<User> users = new ArrayList<User>();
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -110,5 +112,45 @@ public class PhoneOffer {
         this.offer_description = offer_description;
         this.offer_shop_code = offer_shop_code;
         this.phone = phone;
+    }
+
+    public PhoneOffer(Long id,
+                      String offer_shop,
+                      String offer_name,
+                      Integer price,
+                      String ram_memory,
+                      String rom_memory,
+                      String color,
+                      String front_camera,
+                      String back_camera,
+                      String chipset,
+                      String battery,
+                      String operating_system,
+                      String cpu,
+                      String image_url,
+                      String offer_url,
+                      Date last_updated,
+                      Boolean is_validated,
+                      String offer_description,
+                      String offer_shop_code) {
+        this.id = id;
+        this.offer_shop = offer_shop;
+        this.offer_name = offer_name;
+        this.price = price;
+        this.ram_memory = ram_memory;
+        this.rom_memory = rom_memory;
+        this.color = color;
+        this.front_camera = front_camera;
+        this.back_camera = back_camera;
+        this.chipset = chipset;
+        this.battery = battery;
+        this.operating_system = operating_system;
+        this.cpu = cpu;
+        this.image_url = image_url;
+        this.offer_url = offer_url;
+        this.last_updated = last_updated;
+        this.is_validated = is_validated;
+        this.offer_description = offer_description;
+        this.offer_shop_code = offer_shop_code;
     }
 }

@@ -52,6 +52,8 @@ public class User implements UserDetails {
     @JsonIgnore
     private List<PhoneOffer> favouriteOffers = new ArrayList<PhoneOffer>();
 
+    private String specifications;
+
     public User(String firstName, String lastName, String email, String password, UserRole userRole) {
         this.firstName = firstName;
         this.lastName = lastName;
