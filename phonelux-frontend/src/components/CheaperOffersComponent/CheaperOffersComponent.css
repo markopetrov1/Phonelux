@@ -40,4 +40,15 @@
 }
 
 
+.no-cheaper-offers-message{
+    width: fit-content;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #a6c9ab;
+    margin: 0 auto;
+    margin-top: 300px;
+    border: 2px solid black;
+}
+
+
 

@@ -25,6 +25,8 @@ constructor(props) {
           aria-labelledby="cheaperoffers-modal-title"
           aria-describedby="cheaperoffers-modal-description"
         >
+          {
+            this.props.cheaperOffers.length > 0 ?
           <Box className='cheaperoffers-modal-box'>
           <table cellPadding={20} className='cheaperoffers-table'>
             <thead className='cheaperoffers-table-head'>
@@ -54,7 +56,8 @@ constructor(props) {
               }
             </tbody>
           </table>
-          </Box>
+          </Box> : <h1 className='no-cheaper-offers-message'>Нема поевтини понуди</h1>
+          }
         </Modal>
       </div>
     )

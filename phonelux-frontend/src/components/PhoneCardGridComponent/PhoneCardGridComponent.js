@@ -74,9 +74,50 @@ export class PhoneCardGridComponent extends Component {
         filters += 'sortBy='+this.props.sortBy+'&'
       } 
 
-      // dodaj gi i filtrite za specifikacija
+      if(this.props.ram)
+      {
+        filters += 'ram='+this.props.ram+'&'
+      } 
 
-      // izdvoj metod da ti pravi querystring
+      if(this.props.rom)
+      {
+        filters += 'rom='+this.props.rom+'&'
+      } 
+
+      if(this.props.frontcamera)
+      {
+        filters += 'frontcamera='+this.props.frontcamera+'&'
+      } 
+
+      if(this.props.backcamera)
+      {
+        filters += 'backcamera='+this.props.backcamera+'&'
+      } 
+
+      if(this.props.chipset)
+      {
+        filters += 'chipset='+this.props.chipset+'&'
+      } 
+
+      if(this.props.cpu)
+      {
+        filters += 'cpu='+this.props.cpu+'&'
+      } 
+
+      if(this.props.operatingsystem)
+      {
+        filters += 'operatingsystem='+this.props.operatingsystem+'&'
+      } 
+
+      if(this.props.color)
+      {
+        filters += 'color='+this.props.color+'&'
+      } 
+
+      if(this.props.battery)
+      {
+        filters += 'battery='+this.props.battery+'&'
+      } 
 
       axios.get('/phones'+filters)
       .then(response => {

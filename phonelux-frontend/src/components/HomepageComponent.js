@@ -214,14 +214,13 @@ componentDidMount(){
       battery: localStorage.getItem('battery')
     })
   }
-  console.log(this.state)
 }
 
 
   render() {
     // console.log(this.context)
     // console.log(localStorage.getItem('token'))
-    console.log(this.state)
+    // console.log(this.state)
     return (
         <>
         <HeaderComponent/>
