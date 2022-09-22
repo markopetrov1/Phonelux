@@ -23,9 +23,19 @@ public class PhoneController {
                                  @RequestParam(name = "brands", required = false) String brands,
                                  @RequestParam(name = "sortBy", required = false) String sortBy,
                                  @RequestParam(name = "priceRange", required = false) String priceRange,
-                                 @RequestParam(name = "searchValue", required = false) String searchValue){
+                                 @RequestParam(name = "searchValue", required = false) String searchValue,
+                                 @RequestParam(name = "ram", required = false) String ram,
+                                 @RequestParam(name = "rom", required = false) String rom,
+                                 @RequestParam(name = "frontcamera", required = false) String frontcamera,
+                                 @RequestParam(name = "backcamera", required = false) String backcamera,
+                                 @RequestParam(name = "chipset", required = false) String chipset,
+                                 @RequestParam(name = "cpu", required = false) String cpu,
+                                 @RequestParam(name = "operatingsystem", required = false) String operatingsystem,
+                                 @RequestParam(name = "color", required = false) String color,
+                                 @RequestParam(name = "battery", required = false) String battery){
 
-        return phoneService.getPhones(shops,brands,sortBy,priceRange,searchValue);
+        return phoneService.getPhones(shops,brands,sortBy,priceRange,searchValue,
+                ram, rom, frontcamera, backcamera, chipset, cpu, operatingsystem, color, battery);
     }
 
     @GetMapping(path = "/phones/{phoneId}")

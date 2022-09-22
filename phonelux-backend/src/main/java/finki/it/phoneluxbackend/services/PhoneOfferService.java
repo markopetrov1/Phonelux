@@ -230,6 +230,7 @@ public class PhoneOfferService {
                 .filter(cpu -> cpu!=null && !cpu.equals("") && !cpu.equals("/"))
                 .map(cpu -> cpu.split("\n")[0].stripIndent().replaceAll("\n",""))
                 .filter(cpu -> !cpu.contains("Snapdragon") && !cpu.contains("Exynos"))
+                .filter(cpu -> Character.isAlphabetic(cpu.charAt(0)))
                 .distinct()
                 .sorted()
                 .collect(Collectors.toList());
@@ -251,13 +252,24 @@ public class PhoneOfferService {
     public List<String> getBackCameras() {
         List<PhoneOffer> offers = phoneOfferRepository.findAll();
 
-        return offers.stream()
+        List<String> cameras = offers.stream()
                 .map(PhoneOffer::getBack_camera)
                 .filter(camera -> camera != null && !camera.equals("") && !camera.equals("/"))
                 .map(camera -> camera.split("[\n,]")[0].replaceAll("\t",""))
+                .flatMap(camera -> Arrays.stream(camera.split("[+/]")))
+                .map(camera -> camera.replaceAll("MP","").stripIndent())
                 .distinct()
                 .sorted()
                 .collect(Collectors.toList());
+
+        cameras.stream()
+                .forEach(camera -> {
+                    if(Character.isDigit(camera.charAt(0)))
+                    cameras.set(cameras.indexOf(camera), camera+"MP");
+
+                });
+
+        return cameras;
     }
 
     public List<String> getBatteries() {
@@ -266,7 +278,12 @@ public class PhoneOfferService {
         return offers.stream()
                 .map(PhoneOffer::getBattery)
                 .filter(battery -> battery != null && !battery.equals("") && !battery.equals("/"))
-                .map(battery -> battery.split(",")[0].stripIndent())
+                .map(battery -> battery.split(",")[0]
+                        .split("\n")[0]
+                        .replaceAll("'","")
+                        .replaceAll("\t"," ")
+                        .stripIndent())
+                .map(battery -> battery.replaceAll("battery", "").stripIndent())
                 .distinct()
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());

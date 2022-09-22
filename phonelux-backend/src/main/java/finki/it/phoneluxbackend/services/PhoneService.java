@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,9 @@ public class PhoneService {
 
 
     // TODO: insert logic to filter
-    public List<Phone> getPhones(String shops, String brands, String sortBy, String priceRange, String searchValue){
+    public List<Phone> getPhones(String shops, String brands, String sortBy, String priceRange, String searchValue,
+                                 String ram, String rom, String frontcamera, String backcamera, String chipset,
+                                 String cpu, String operatingsystem, String color, String battery){
         List<Phone> phones = phoneRepository.findAll();
 
 
@@ -55,6 +58,101 @@ public class PhoneService {
                     .collect(Collectors.toList());
         }
 
+
+        // specifications filters
+
+        if(ram != null){
+            String [] memories = ram.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(memories).anyMatch(memory -> phone.getPhoneOffers().stream()
+                                    .filter(offer -> offer.getRam_memory() != null)
+                                    .anyMatch(offer -> hasSpecification(offer.getRam_memory(),memory))
+                            )
+                    )
+                    .collect(Collectors.toList());
+        }
+
+        if(rom != null){
+            String [] memories = rom.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(memories).anyMatch(memory -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getRom_memory() != null)
+                            .anyMatch(offer ->  hasSpecification(offer.getRom_memory(),memory))))
+                    .collect(Collectors.toList());
+        }
+
+        if(frontcamera != null){
+            String [] cameras = frontcamera.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(cameras).anyMatch(camera -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getFront_camera() != null)
+                            .anyMatch(offer -> hasSpecification(offer.getFront_camera(),camera)
+                            )
+                    )
+                    )
+                    .collect(Collectors.toList());
+        }
+
+        if(backcamera != null){
+            String [] cameras = backcamera.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(cameras).anyMatch(camera -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getBack_camera() != null)
+                            .anyMatch(offer -> hasSpecification(offer.getBack_camera(),camera))))
+                    .collect(Collectors.toList());
+        }
+
+        if(chipset != null)
+        {
+            String [] chipsets = chipset.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(chipsets).anyMatch(chip -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getChipset() != null)
+                            .anyMatch(offer -> offer.getChipset().contains(chip))))
+                    .collect(Collectors.toList());
+        }
+
+        if(cpu != null)
+        {
+            String [] cpus = cpu.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(cpus).anyMatch(processor -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getCpu() != null)
+                            .anyMatch(offer -> offer.getCpu().contains(processor))))
+                    .collect(Collectors.toList());
+        }
+
+        if(operatingsystem != null)
+        {
+            String [] operatingSystems = operatingsystem.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(operatingSystems).anyMatch(os -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getOperating_system() != null)
+                            .anyMatch(offer -> offer.getOperating_system().contains(os))))
+                    .collect(Collectors.toList());
+        }
+
+        if(color != null)
+        {
+            String [] colors = color.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(colors).anyMatch(c -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getColor() != null)
+                            .anyMatch(offer -> offer.getColor().contains(c))))
+                    .collect(Collectors.toList());
+        }
+
+        if(battery != null)
+        {
+            String [] batteries = battery.split(",");
+            phones = phones.stream()
+                    .filter(phone -> Arrays.stream(batteries).anyMatch(b -> phone.getPhoneOffers().stream()
+                            .filter(offer -> offer.getBattery() != null)
+                            .anyMatch(offer -> offer.getBattery().contains(b))))
+                    .collect(Collectors.toList());
+        }
+
+
         phones = phones.stream().sorted(Comparator.comparing(Phone::getTotal_offers).reversed())
                 .collect(Collectors.toList());
         if(sortBy != null)
@@ -73,6 +171,58 @@ public class PhoneService {
         }
 
         return phones;
+    }
+
+    public boolean hasSpecification(String specification, String filter){
+        if(specification.contains(filter))
+        {
+            if(specification.indexOf(filter)-1 < 0) {
+                return true;
+            }
+
+            if(!Character.isDigit(specification
+                    .charAt(specification.indexOf(filter)-1))) {
+                return true;
+            }
+        }
+
+        if(specification.contains(filter.split("GB")[0]+" GB"))
+        {
+            if(specification.indexOf(filter.split("GB")[0]+" GB")-1 < 0) {
+                return true;
+            }
+
+            if(!Character.isDigit(specification
+                    .charAt(specification.indexOf(filter.split("GB")[0]+" GB")-1))) {
+                return true;
+            }
+        }
+
+        if(specification.contains(filter.split("MP")[0]+" MP"))
+        {
+            if(specification.indexOf(filter.split("MP")[0]+" MP")-1 < 0) {
+                return true;
+            }
+
+            if(!Character.isDigit(specification
+                    .charAt(specification.indexOf(filter.split("MP")[0]+" MP")-1))) {
+                return true;
+            }
+        }
+
+        if(specification.contains(filter.split("MB")[0]+" MB"))
+        {
+            if(specification.indexOf(filter.split("MB")[0]+" MB")-1 < 0) {
+                return true;
+            }
+
+            if(!Character.isDigit(specification
+                    .charAt(specification.indexOf(filter.split("MB")[0]+" MB")-1))) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public List<String> getBrands(){
