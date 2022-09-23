@@ -15,7 +15,6 @@ export class FilterSelectComponent extends React.Component {
     constructor(props) {
       super(props)
         const {type} = this.props
-        console.log(type)
       this.state = {
          pickedItems: localStorage.getItem(type) ? localStorage.getItem(type).split(',') : [],
          items: [],

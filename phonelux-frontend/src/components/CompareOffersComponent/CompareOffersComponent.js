@@ -89,72 +89,90 @@ export class CompareOffersComponent extends Component {
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Цена</th>
                         {
-                        this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.price}</td>)
+                        this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.price} ден.</td>)
                         }
                     </tr>
+                    { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>РАМ меморија</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.ram_memory == null || 
                             offer.ram_memory == '' ? '/' : offer.ram_memory}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>РОМ меморија</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.rom_memory == null || 
                             offer.rom_memory == '' ? '/' : offer.rom_memory}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Предна камера</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.front_camera == null || 
                             offer.front_camera == '' ? '/' : offer.front_camera}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Задна камера</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.back_camera == null || 
                             offer.back_camera == '' ? '/' : offer.back_camera}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Процесор</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.cpu == null || 
                             offer.cpu == '' ? '/' : offer.cpu}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Чипсет</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.chipset == null || 
                             offer.chipset == '' ? '/' : offer.chipset}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Оперативен систем</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.operating_system == null || 
                             offer.operating_system == '' ? '/' : offer.operating_system}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Батерија</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.battery == null || 
                             offer.battery == '' ? '/' : offer.battery}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
+                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Боја</th>
                         {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.color == null || 
                             offer.color == '' ? '/' : offer.color}</td>)
                         }
-                    </tr>
+                    </tr> : <></>
+                    }
                 </tbody>
                 </table>
             }

@@ -120,12 +120,6 @@ export class PhoneOfferComponent extends Component {
           </Tippy>
           }
       })()}
-        {/* {
-          localStorage.getItem('token') && !localStorage.getItem('offersToCompare').includes(this.props.id)? 
-          <Tippy placement='bottom' content='Додади понуда за споредба'>
-          <CompareIcon onClick={this.handleOfferCompare} className='phone-offer-compare-icon' style={{fontSize: '40px', marginRight: '10px' }}/>
-        </Tippy> : <></>
-        } */}
         {
           window.location.href.split('/')[5] == 'favouriteoffers' ?   
           <Tippy placement='bottom' content='Прикажи поевтини понуди'>

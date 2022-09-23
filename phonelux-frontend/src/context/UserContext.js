@@ -25,12 +25,11 @@ export class UserProvider extends Component {
              this.setState({
                 userId: id,
                 name: firstName,
-                role: userRole
+                role: userRole,
              })
             }).catch(error => console.log(error))
         }
     }
-    
     
   render() {
     const {userId,name,role} = this.state
@@ -38,7 +37,7 @@ export class UserProvider extends Component {
       <UserContext.Provider value={{
         userId,
         name,
-        role
+        role,
       }}>
         {this.props.children}
       </UserContext.Provider>

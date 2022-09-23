@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
+import UserContext from '../context/UserContext'
 import HeaderComponent from './HeaderComponent/HeaderComponent'
 import PhoneWithOffersComponent from './PhoneWithOffersComponent/PhoneWithOffersComponent'
 
@@ -33,5 +34,4 @@ export class PhonePageComponent extends Component {
     )
   }
 }
-
 export default PhonePageComponent

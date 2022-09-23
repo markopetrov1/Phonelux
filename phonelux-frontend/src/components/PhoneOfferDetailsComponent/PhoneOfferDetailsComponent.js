@@ -105,50 +105,68 @@ export class PhoneOfferDetailsComponent extends Component {
               <td>Цена</td><td>{this.state.offer == null || 
               this.state.offer.price == null ? '/' : this.state.offer.price+' ден.'}</td>
             </tr>
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
             <tr className='phone-offer-details-table-row'>
               <td>Предна камера</td><td>{this.state.offer == null || 
               this.state.offer.front_camera == null ? '/' : this.state.offer.front_camera}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+             { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
             <tr className='phone-offer-details-table-row'>
               <td>Задна камера</td><td>{this.state.offer == null || 
               this.state.offer.back_camera == null ? '/' : this.state.offer.back_camera}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
             <tr className='phone-offer-details-table-row'>
               <td>РОМ меморија</td><td>{this.state.offer == null || 
               this.state.offer.rom_memory == null ? '/' : this.state.offer.rom_memory}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
             <tr className='phone-offer-details-table-row'>
               <td>РАМ меморија</td><td>{this.state.offer == null || 
               this.state.offer.ram_memory == null ? '/' : this.state.offer.ram_memory}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
             <tr className='phone-offer-details-table-row'>
               <td>Оперативен систем</td><td>{this.state.offer == null || 
               this.state.offer.operating_system == null ? '/' : this.state.offer.operating_system}</td>
-            </tr>
+            </tr> : <></>
+             }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
             <tr className='phone-offer-details-table-row'>
               <td>Чипсет</td><td>{this.state.offer == null || 
               this.state.offer.chipset == null ? '/' : this.state.offer.chipset}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
             <tr className='phone-offer-details-table-row'>
               <td>Процесор</td><td>{this.state.offer == null || 
               this.state.offer.cpu == null ? '/' : this.state.offer.cpu}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
             <tr className='phone-offer-details-table-row'>
               <td>Батерија</td><td>{this.state.offer == null || 
               this.state.offer.battery == null ? '/' : this.state.offer.battery}</td>
-            </tr>
+            </tr> : <></>
+            }
 
+            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
             <tr className='phone-offer-details-table-row'>
               <td>Боја</td><td>{this.state.offer == null || 
               this.state.offer.color == null ? '/' : this.state.offer.color}</td>
-            </tr>
+            </tr> : <></>
+            }
 
             <tr className='phone-offer-details-table-row'>
               <td>Опис</td><td>{this.state.offer == null || 

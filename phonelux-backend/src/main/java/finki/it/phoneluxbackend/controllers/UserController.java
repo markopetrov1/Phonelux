@@ -32,4 +32,15 @@ public class UserController {
         return userService.editOfferForUser(userId,offerId, "remove");
     }
 
+    @PutMapping(path = "/{userId}/editspecifications")
+    public ResponseEntity<Object> editSpecificationsForUser(@PathVariable("userId") Long userId,
+                                                            @RequestBody String specifications){
+        return userService.editSpecificationsForUser(userId,specifications);
+    }
+
+    @GetMapping(path = "/{userId}/getspecifications")
+    public String getSpecificationsForUser(@PathVariable("userId") Long userId){
+        return userService.getSpecificationsForUser(userId);
+    }
+
 }

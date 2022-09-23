@@ -51,6 +51,8 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
                         .map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
                 .withClaim("name", user.getFirstName())
                 .withClaim("id", user.getId())
+//                .withClaim("pickedSpecifications",user.getSpecifications()!=null ?
+//                        user.getSpecifications() : "[]")
                 .sign(algorithm);
 
 

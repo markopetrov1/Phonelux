@@ -19,3 +19,19 @@
     height: 500px;
     overflow-y: scroll;
 }
+
+.pick-specifications-icon{
+    margin-left: 10px;
+}
+
+.pick-specifications-icon:hover{
+    cursor: pointer;
+}
+
+.specifications-filter-main{
+    display: flex;
+}
+.tippy-pick-specifications-icon{
+    width: fit-content;
+    text-align: center;
+}

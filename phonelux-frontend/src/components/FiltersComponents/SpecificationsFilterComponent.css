@@ -17,7 +17,10 @@
 
 .popover-specification-container{
     overflow-y: scroll;
-    height: 400px;
+    height: fit-content;
+    padding-bottom: 30px;
+    max-height: 400px;
+    
 }
 
 .popover-specification-container-header{

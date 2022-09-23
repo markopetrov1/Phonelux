@@ -18,7 +18,7 @@ constructor(props) {
   render() {
 
     return (
-        <div>
+        <div className='cheaperoffers-modal-main'>
         <Modal 
           open={this.props.openModal}
           onClose={this.props.handleClose}

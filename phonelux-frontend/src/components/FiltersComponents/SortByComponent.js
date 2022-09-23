@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './SortByComponent.css'
 import SpecificationsFilterComponent from './SpecificationsFilterComponent'
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import PickSpecificationComponent from '../PickSpecificationComponent/PickSpecificationComponent';
 
 export class SortByComponent extends Component {
 
@@ -9,7 +11,8 @@ export class SortByComponent extends Component {
       super(props)
     
       this.state = {
-         sortBy: localStorage.getItem('sortBy') ? localStorage.getItem('sortBy') : 'mostPopular'
+         sortBy: localStorage.getItem('sortBy') ? localStorage.getItem('sortBy') : 'mostPopular',
+         openModal: false
       }
     }
 

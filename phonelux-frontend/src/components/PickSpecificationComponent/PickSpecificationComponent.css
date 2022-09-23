@@ -1,0 +1,45 @@
+.pick-specification-modal-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 24;
+    background-color: #e3f2e9;
+    width: 600px;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid black;
+}
+
+.pick-specification-modal-title{
+    padding: 30px;
+    text-align: center;
+    background-color: #B6E2C8;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pick-specification-specs-wrapper h3{
+    text-align: center;
+}
+
+
+.pick-specification-specs-item{
+    background-color: #e3f2e9;
+    padding: 20px;
+    text-align: center;
+}
+.pick-specification-specs-item:hover{
+    background-color: #a6c9ab;
+    cursor: pointer;
+}
+
+.pick-specification-item-label span{
+    font-size: 20px;
+}
+
+.pick-specification-list{
+    background-color: #e3f2e9
+}
+
+

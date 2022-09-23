@@ -7,13 +7,17 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import FilterSelectComponent from './FilterSelectComponent';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import PickSpecificationComponent from '../PickSpecificationComponent/PickSpecificationComponent';
+import axios from 'axios';
+import UserContext from '../../context/UserContext';
 export class SpecificationsFilterComponent extends Component {
 
     constructor(props) {
       super(props)
     
       this.state = {
-        anchorEl: null
+        anchorEl: null,
+        openModal: false,
       }
     }
 
@@ -28,6 +32,18 @@ export class SpecificationsFilterComponent extends Component {
         anchorEl: null
       })
     };
+
+    handleModalClose = () =>{
+      this.setState({
+        openModal: false
+      })
+    }
+
+    handleModalOpen = () =>{
+        this.setState({
+            openModal: true
+        })
+    }
 
   render() {
 
@@ -52,21 +68,47 @@ export class SpecificationsFilterComponent extends Component {
       >
         <div className='popover-specification-container'>
         <h2 className='popover-specification-container-header'>Филтер за спецификации</h2>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='ram'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='rom'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='frontcamera'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='backcamera'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='chipset'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='cpu'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='operatingsystem'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='color'></FilterSelectComponent>
-        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='battery'></FilterSelectComponent>
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='ram'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='rom'></FilterSelectComponent> : <></>
+        } 
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='frontcamera'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='backcamera'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='chipset'></FilterSelectComponent> : <></>
+        }
+         { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='cpu'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='operatingsystem'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='color'></FilterSelectComponent> : <></>
+        }
+        { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
+        <FilterSelectComponent changeHandler={this.props.changeHandler} width={400} type='battery'></FilterSelectComponent> : <></>
+        }
         </div>
       </Popover>
+      <Tippy className='tippy-pick-specifications-icon' placement='bottom' content='Изберете спецификации за приказ'>
+        <FilterAltIcon onClick={this.handleModalOpen} style={{fontSize: '35px'}} className='pick-specifications-icon'></FilterAltIcon>
+        </Tippy>
+        { this.context.userId != '' && <PickSpecificationComponent
+        openModal={this.state.openModal} 
+        handleClose={this.handleModalClose}/> }
       </div>
     )
   }
 }
+
+SpecificationsFilterComponent.contextType = UserContext
 
 export default SpecificationsFilterComponent
 

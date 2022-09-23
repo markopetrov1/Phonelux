@@ -84,7 +84,7 @@ public class UserService implements UserDetailsService {
         UserRole role = UserRole.valueOf(decodedJWT.getClaim("role").asArray(String.class)[0]);
         String name = decodedJWT.getClaim("name").as(String.class);
         Long id = decodedJWT.getClaim("id").as(Long.class);
-
+//        String pickedSpecifications = decodedJWT.getClaim("pickedSpecifications").as(String.class);
         return new User(id,name,role);
     }
 
@@ -173,5 +173,31 @@ public class UserService implements UserDetailsService {
         user.setUserRole(UserRole.USER);
         userRepository.save(user);
         return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<Object> editSpecificationsForUser(Long userId, String specifications) {
+        boolean userExists = userRepository.existsById(userId);
+        if (!userExists)
+        {
+            return ResponseEntity.badRequest().body("User with id "+userId+" doesn't exist");
+        }
+        User user = userRepository.findById(userId).get();
+
+        user.setSpecifications(specifications);
+        userRepository.save(user);
+
+        return ResponseEntity.ok().build();
+    }
+
+    public String getSpecificationsForUser(Long userId) {
+        boolean userExists = userRepository.existsById(userId);
+        if (!userExists)
+        {
+            throw new UsernameNotFoundException("User with id "+userId+" doesn't exist");
+        }
+
+        User user = userRepository.findById(userId).get();
+
+        return user.getSpecifications() != null ? user.getSpecifications() : "[]";
     }
 }

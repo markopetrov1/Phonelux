@@ -219,7 +219,7 @@ componentDidMount(){
 
   render() {
     // console.log(this.context)
-    // console.log(localStorage.getItem('token'))
+    console.log(localStorage.getItem('token'))
     // console.log(this.state)
     return (
         <>
