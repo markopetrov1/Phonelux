@@ -1,10 +1,8 @@
 package finki.it.phoneluxbackend.services;
 
 import finki.it.phoneluxbackend.entities.Phone;
-import finki.it.phoneluxbackend.entities.PhoneOffer;
 import finki.it.phoneluxbackend.repositories.PhoneRepository;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -26,7 +24,9 @@ public class PhoneService {
     public List<Phone> getPhones(String shops, String brands, String sortBy, String priceRange, String searchValue,
                                  String ram, String rom, String frontcamera, String backcamera, String chipset,
                                  String cpu, String operatingsystem, String color, String battery){
-        List<Phone> phones = phoneRepository.findAll();
+        List<Phone> phones = phoneRepository.findAll().stream()
+                .filter(phone -> phone.getTotal_offers() > 0)
+                .collect(Collectors.toList());
 
 
         if(brands != null)
@@ -152,7 +152,6 @@ public class PhoneService {
                     .collect(Collectors.toList());
         }
 
-
         phones = phones.stream().sorted(Comparator.comparing(Phone::getTotal_offers).reversed())
                 .collect(Collectors.toList());
         if(sortBy != null)
@@ -227,7 +226,8 @@ public class PhoneService {
 
     public List<String> getBrands(){
         return phoneRepository.findAll().stream()
-                .map(Phone::getBrand).distinct()
+                .map(phone -> phone.getBrand().stripIndent())
+                .distinct()
                 .collect(Collectors.toList());
     }
 
@@ -236,5 +236,53 @@ public class PhoneService {
         if(!exists)
             throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
         return phoneRepository.findById(phoneId).get();
+    }
+
+    public Long getTotalOffersForPhone(String phoneModel) {
+        String model = String.join(" ", phoneModel.split("\\*"));
+        boolean exists = phoneRepository.findPhoneByModel(model).isPresent();
+
+        if(!exists)
+            throw new IllegalStateException("Phone with model "+model+" does not exist");
+
+        return phoneRepository.findPhoneByModel(model).get().getPhoneOffers().stream().count();
+    }
+
+    public ResponseEntity<Object> setTotalOffersForPhone(Long phoneId, int totaloffers) {
+        boolean exists = phoneRepository.findById(phoneId).isPresent();
+
+        if(!exists)
+            throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
+
+        Phone phone = phoneRepository.findById(phoneId).get();
+        phone.setTotal_offers(totaloffers);
+        phoneRepository.save(phone);
+        return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<Object> setLowestPriceForPhone(Long phoneId, int lowestPrice) {
+        boolean exists = phoneRepository.findById(phoneId).isPresent();
+
+        if(!exists)
+            throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
+
+        Phone phone = phoneRepository.findById(phoneId).get();
+        phone.setLowestPrice(lowestPrice);
+        phoneRepository.save(phone);
+        return ResponseEntity.ok().build();
+    }
+
+
+    public ResponseEntity<Object> setImageUrlForPhone(Long phoneId, String newImageUrl) {
+        boolean exists = phoneRepository.findById(phoneId).isPresent();
+
+        if(!exists)
+            throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
+
+        Phone phone = phoneRepository.findById(phoneId).get();
+        phone.setImage_url(newImageUrl);
+        phoneRepository.save(phone);
+
+        return ResponseEntity.ok().build();
     }
 }

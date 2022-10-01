@@ -5,7 +5,10 @@ import finki.it.phoneluxbackend.entities.PhoneOffer;
 import finki.it.phoneluxbackend.services.PhoneOfferService;
 import finki.it.phoneluxbackend.services.PhoneService;
 import lombok.AllArgsConstructor;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
@@ -48,5 +51,35 @@ public class PhoneController {
     public List<String> getBrands(){
         return phoneService.getBrands();
     }
+
+    @GetMapping(path = "/totaloffers/{phoneModel}")
+    public Long getTotalOffersForPhone(@PathVariable("phoneModel") String phoneModel){
+        return phoneService.getTotalOffersForPhone(phoneModel);
+    }
+
+    @PutMapping(path = "/settotaloffers/{phoneId}/{totaloffers}")
+    public ResponseEntity<Object> setTotalOffersForPhone(@PathVariable("phoneId") Long phoneId,
+                                                         @PathVariable("totaloffers") int totaloffers){
+        return phoneService.setTotalOffersForPhone(phoneId,totaloffers);
+    }
+
+    @PutMapping(path = "/setlowestprice/{phoneId}/{lowestPrice}")
+    public ResponseEntity<Object> setLowestPriceForPhone(@PathVariable("phoneId") Long phoneId,
+                                                         @PathVariable("lowestPrice") int lowestPrice){
+        return phoneService.setLowestPriceForPhone(phoneId,lowestPrice);
+    }
+
+    @PutMapping(path = "/setimageurl/{phoneId}", consumes = {
+            MediaType.APPLICATION_JSON_VALUE,
+            MediaType.APPLICATION_XML_VALUE
+    }, produces = {
+            MediaType.APPLICATION_JSON_VALUE,
+            MediaType.APPLICATION_XML_VALUE
+    })
+    public ResponseEntity<Object> setImageUrlForPhone(@PathVariable("phoneId") Long phoneId,
+                                                         @RequestBody String newImageUrl){
+        return phoneService.setImageUrlForPhone(phoneId,newImageUrl);
+    }
+
 
 }

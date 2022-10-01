@@ -22,7 +22,8 @@ public class AdminController {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE
     })
-    public ResponseEntity<Object> editOffer(@PathVariable("offerId") Long offerId, @RequestBody PhoneOffer editedOffer){
+    public ResponseEntity<Object> editOffer(@PathVariable("offerId") Long offerId, @RequestBody PhoneOffer editedOffer)
+    {
 
         return phoneOfferService.editOffer(offerId,editedOffer);
     }

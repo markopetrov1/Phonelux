@@ -42,5 +42,12 @@ public class Phone {
         this.model = model;
     }
 
-
+    public Phone(Long id, String brand, String model, String image_url, Integer total_offers, Integer lowestPrice) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.image_url = image_url;
+        this.total_offers = total_offers;
+        this.lowestPrice = lowestPrice;
+    }
 }

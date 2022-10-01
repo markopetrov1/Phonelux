@@ -4,6 +4,7 @@ import finki.it.phoneluxbackend.entities.Phone;
 import finki.it.phoneluxbackend.entities.PhoneOffer;
 import finki.it.phoneluxbackend.repositories.PhoneOfferRepository;
 import finki.it.phoneluxbackend.repositories.PhoneRepository;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -125,8 +126,15 @@ public class PhoneOfferService {
     public List<PhoneOffer> getOffersFromShop(String shop) {
         List<PhoneOffer> offers = phoneOfferRepository.findAll();
 
+        if(shop.equalsIgnoreCase("mobigo"))
+            shop = "Mobi Go";
+
+        if(shop.equalsIgnoreCase("mobilezone"))
+            shop = "Mobile Zone";
+        String finalShop = shop;
+
         return offers.stream()
-                .filter(offer -> offer.getOffer_shop().equalsIgnoreCase(shop))
+                .filter(offer -> offer.getOffer_shop().stripIndent().equalsIgnoreCase(finalShop.stripIndent()))
                 .collect(Collectors.toList());
     }
 
@@ -299,5 +307,59 @@ public class PhoneOfferService {
                 .distinct()
                 .sorted()
                 .collect(Collectors.toList());
+    }
+
+    public ResponseEntity<Object> addOffer(PhoneOffer offer) {
+        phoneOfferRepository.save(offer);
+        return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<Object> deleteOffer(Long offerId) {
+        boolean exists = phoneOfferRepository.existsById(offerId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone offer with id "+offerId+" does not exist");
+
+        phoneOfferRepository.deleteById(offerId);
+
+        return ResponseEntity.ok().build();
+    }
+
+    public List<PhoneOffer> getAllOffers() {
+        return phoneOfferRepository.findAll();
+    }
+
+    public ResponseEntity<Object> addPhoneModelToOffer(Long offerId, Long phoneId) {
+        boolean exists = phoneOfferRepository.existsById(offerId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone offer with id "+offerId+" does not exist");
+
+        PhoneOffer offer = phoneOfferRepository.findById(offerId).get();
+
+        exists = phoneRepository.existsById(phoneId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone with id "+phoneId+" does not exist");
+
+        Phone phone = phoneRepository.findById(phoneId).get();
+
+        offer.setPhone(phone);
+        phoneOfferRepository.save(offer);
+
+        return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<Object> changePriceForOffer(Long offerId, int price) {
+        boolean exists = phoneOfferRepository.existsById(offerId);
+
+        if(!exists)
+            throw new IllegalStateException("Phone offer with id "+offerId+" does not exist");
+
+        PhoneOffer offer = phoneOfferRepository.findById(offerId).get();
+        offer.setPrice(price);
+        phoneOfferRepository.save(offer);
+
+        return ResponseEntity.ok().build();
     }
 }

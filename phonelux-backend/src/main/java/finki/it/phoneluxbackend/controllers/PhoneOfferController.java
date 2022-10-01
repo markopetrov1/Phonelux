@@ -6,6 +6,7 @@ import finki.it.phoneluxbackend.services.PhoneOfferService;
 import finki.it.phoneluxbackend.services.PhoneService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,13 +16,18 @@ import java.util.List;
 public class PhoneOfferController {
     private final PhoneOfferService phoneOfferService;
 
+
+    @GetMapping(path = "/alloffers")
+    public List<PhoneOffer> getAllOffers(){
+        return phoneOfferService.getAllOffers();
+    }
     @GetMapping(path = "/phones/offers/{phoneId}")
     public List<PhoneOffer> getOffersForPhone(@PathVariable("phoneId") Long phoneId){
         return phoneOfferService.getPhoneOffersForPhone(phoneId);
     }
 
     @GetMapping(path = "/multipleoffers")
-    public List<PhoneOffer> getPhoneOffer(@RequestParam("offerIds") String offerIds){
+    public List<PhoneOffer> getMultiplePhoneOffers(@RequestParam("offerIds") String offerIds){
         return phoneOfferService.getMultiplePhoneOffers(offerIds);
     }
 
@@ -57,4 +63,29 @@ public class PhoneOfferController {
         return phoneOfferService.getHighestPrice();
     }
 
+
+    @PutMapping(path = "/phoneoffer/{offerId}/addphonemodel/{phoneId}")
+    public ResponseEntity<Object> addPhoneModelToOffer(@PathVariable("offerId") Long offerId,
+                                                       @PathVariable("phoneId") Long phoneId)
+    {
+        return phoneOfferService.addPhoneModelToOffer(offerId,phoneId);
+    }
+    @PutMapping(path = "/phoneoffer/{offerId}/changeprice/{price}")
+    public ResponseEntity<Object> changePriceForOffer(@PathVariable("offerId") Long offerId,
+                                                       @PathVariable("price") int price)
+    {
+        return phoneOfferService.changePriceForOffer(offerId,price);
+    }
+
+    @PostMapping(path = "/phoneoffer/addoffer")
+    public ResponseEntity<Object> addOffer(@RequestBody PhoneOffer offer)
+    {
+        return phoneOfferService.addOffer(offer);
+    }
+
+    @DeleteMapping(path = "/phoneoffer/deleteoffer/{offerId}")
+    public ResponseEntity<Object> deleteOffer(@PathVariable("offerId") Long offerId)
+    {
+        return phoneOfferService.deleteOffer(offerId);
+    }
 }
