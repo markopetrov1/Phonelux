@@ -43,8 +43,6 @@ export class PhoneCardGridComponent extends Component {
         filters += 'sortBy='+localStorage.getItem('sortBy')+'&'
       } 
 
-      // dodaj filtri za specifikacija i sredi go sortBy
-
       return filters
   }
 

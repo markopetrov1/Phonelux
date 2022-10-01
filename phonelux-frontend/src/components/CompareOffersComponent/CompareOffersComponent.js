@@ -5,6 +5,8 @@ import CompareIcon from '@mui/icons-material/Compare';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import axios from 'axios';
 import Tippy from '@tippyjs/react';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 export class CompareOffersComponent extends Component {
 
@@ -12,7 +14,8 @@ export class CompareOffersComponent extends Component {
       super(props)
     
       this.state = {
-         offersToCompare: []
+         offersToCompare: [],
+         showAllSpecs : false
       }
     }
     componentDidMount() {
@@ -47,9 +50,14 @@ export class CompareOffersComponent extends Component {
         })
     }
 
+    changeShownSpecs = () => {
+        this.setState({
+            showAllSpecs: !this.state.showAllSpecs
+        })
+    }
+
     
   render() {
-    console.log(this.state)
     return (
       <div className='compare-offers-main'>
         <HeaderComponent/>
@@ -64,7 +72,17 @@ export class CompareOffersComponent extends Component {
                 return  <table cellPadding={20} className='compare-offers-table'>
                 <tbody>
                     <tr className='compare-offers-table-row'>
-                        <th className='compare-offer-table-headers'></th>
+                        <th className='compare-offer-table-headers'>
+                            {
+                                this.state.showAllSpecs ? 
+                            <Tippy placement='bottom' content='Прикажи ги избраните спецификации'>
+                                <VisibilityOffIcon className='show-all-specs-icon' onClick={this.changeShownSpecs} style={{fontSize: '45px'}}/>
+                            </Tippy> :
+                            <Tippy placement='bottom' content='Прикажи ги сите спецификации'>
+                                <VisibilityIcon className='show-all-specs-icon' onClick={this.changeShownSpecs} style={{fontSize: '45px'}}/>
+                            </Tippy>
+                            }
+                        </th>
                         {
                             this.state.offersToCompare.map((offer,idx) => 
                             <Tippy placement='bottom' content='Отстранете ја понудата'>
@@ -92,7 +110,9 @@ export class CompareOffersComponent extends Component {
                         this.state.offersToCompare.map((offer,idx) => <td key={idx}>{offer.price} ден.</td>)
                         }
                     </tr>
-                    { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
+                    { this.state.showAllSpecs ||
+                    !localStorage.getItem('pickedSpecifications') || 
+                    localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>РАМ меморија</th>
                         {
@@ -101,7 +121,9 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || 
+                     localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>РОМ меморија</th>
                         {
@@ -110,7 +132,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Предна камера</th>
                         {
@@ -119,7 +142,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Задна камера</th>
                         {
@@ -128,7 +152,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Процесор</th>
                         {
@@ -137,7 +162,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Чипсет</th>
                         {
@@ -146,7 +172,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Оперативен систем</th>
                         {
@@ -155,7 +182,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Батерија</th>
                         {
@@ -164,7 +192,8 @@ export class CompareOffersComponent extends Component {
                         }
                     </tr> : <></>
                     }
-                     { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
+                     { this.state.showAllSpecs ||
+                     !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
                     <tr className='compare-offers-table-row'>
                         <th className='compare-offer-table-headers'>Боја</th>
                         {

@@ -10,6 +10,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PickSpecificationComponent from '../PickSpecificationComponent/PickSpecificationComponent';
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
+import SettingsIcon from '@mui/icons-material/Settings';
 export class SpecificationsFilterComponent extends Component {
 
     constructor(props) {
@@ -52,7 +53,8 @@ export class SpecificationsFilterComponent extends Component {
 
     return (
       <div className='specifications-filter-main'>
-        <h4 aria-describedby={id} className='specifications-filter-header' onClick={this.handleClick}>Спецификации
+        <h4 aria-describedby={id} className='specifications-filter-header' onClick={this.handleClick}>
+          <FilterAltIcon className='specifications-filter-icon-header'/>Филтер за спецификации
         <ArrowDropDownIcon style={{marginTop:'-2px'}}/>
         </h4>
       <Popover
@@ -97,9 +99,9 @@ export class SpecificationsFilterComponent extends Component {
         }
         </div>
       </Popover>
-      <Tippy className='tippy-pick-specifications-icon' placement='bottom' content='Изберете спецификации за приказ'>
-        <FilterAltIcon onClick={this.handleModalOpen} style={{fontSize: '35px'}} className='pick-specifications-icon'></FilterAltIcon>
-        </Tippy>
+        <h4 aria-describedby={id} className='pick-specifications-header' onClick={this.handleModalOpen}>
+          <SettingsIcon className='specifications-filter-icon-header'/>Спецификации за приказ
+        </h4>
         { this.context.userId != '' && <PickSpecificationComponent
         openModal={this.state.openModal} 
         handleClose={this.handleModalClose}/> }

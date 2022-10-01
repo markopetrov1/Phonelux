@@ -6,6 +6,8 @@ import UserContext from '../../context/UserContext'
 import CheckIcon from '@mui/icons-material/Check';
 import { Link } from 'react-router-dom'
 import Tippy from '@tippyjs/react'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 
 export class PhoneOfferDetailsComponent extends Component {
@@ -15,7 +17,8 @@ export class PhoneOfferDetailsComponent extends Component {
     
       this.state = {
         offerId: window.location.href.split('/')[4],
-        offer: null
+        offer: null,
+        showAllSpecs: false
       }
     }
 
@@ -50,6 +53,13 @@ export class PhoneOfferDetailsComponent extends Component {
       });
     }
 
+
+    changeShownSpecs = () => {
+      this.setState({
+          showAllSpecs: !this.state.showAllSpecs
+      })
+  }
+
   render() {
     console.log(this.state)
     return (
@@ -58,6 +68,17 @@ export class PhoneOfferDetailsComponent extends Component {
         <div className='phone-offer-details-last-updated-wrapper'>
           <h3 className='phone-offer-details-last-updated-header'>Последно ажурирана: {this.state.offer == null || 
           this.state.offer.last_updated == null ? '#' : this.state.offer.last_updated.split('T')[0]}</h3>
+          {
+            localStorage.getItem('token') ? 
+            this.state.showAllSpecs ? 
+              <Tippy placement='bottom' content='Прикажи ги избраните спецификации'>
+                 <VisibilityOffIcon className='offerdetails-show-all-specs-icon' onClick={this.changeShownSpecs} style={{fontSize: '45px'}}/>
+              </Tippy> :
+              <Tippy placement='bottom' content='Прикажи ги сите спецификации'>
+                <VisibilityIcon className='offerdetails-show-all-specs-icon' onClick={this.changeShownSpecs} style={{fontSize: '45px'}}/>
+              </Tippy> : <></>
+          }
+
           {
             localStorage.getItem('token') && (this.context.role == 'ADMIN' || this.context.role == 'SUPERADMIN') ?
             <Link className='link-offer-edit' style={{color:'black'}} to={'/admin/editoffer/'+this.state.offerId}>
@@ -105,63 +126,72 @@ export class PhoneOfferDetailsComponent extends Component {
               <td>Цена</td><td>{this.state.offer == null || 
               this.state.offer.price == null ? '/' : this.state.offer.price+' ден.'}</td>
             </tr>
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
+            { this.state.showAllSpecs || 
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Предна камера") ?
             <tr className='phone-offer-details-table-row'>
               <td>Предна камера</td><td>{this.state.offer == null || 
               this.state.offer.front_camera == null ? '/' : this.state.offer.front_camera}</td>
             </tr> : <></>
             }
 
-             { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
+             { this.state.showAllSpecs || 
+             !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Задна камера") ?
             <tr className='phone-offer-details-table-row'>
               <td>Задна камера</td><td>{this.state.offer == null || 
               this.state.offer.back_camera == null ? '/' : this.state.offer.back_camera}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РОМ меморија") ?
             <tr className='phone-offer-details-table-row'>
               <td>РОМ меморија</td><td>{this.state.offer == null || 
               this.state.offer.rom_memory == null ? '/' : this.state.offer.rom_memory}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("РАМ меморија") ?
             <tr className='phone-offer-details-table-row'>
               <td>РАМ меморија</td><td>{this.state.offer == null || 
               this.state.offer.ram_memory == null ? '/' : this.state.offer.ram_memory}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Оперативен систем") ?
             <tr className='phone-offer-details-table-row'>
               <td>Оперативен систем</td><td>{this.state.offer == null || 
               this.state.offer.operating_system == null ? '/' : this.state.offer.operating_system}</td>
             </tr> : <></>
              }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Чипсет") ?
             <tr className='phone-offer-details-table-row'>
               <td>Чипсет</td><td>{this.state.offer == null || 
               this.state.offer.chipset == null ? '/' : this.state.offer.chipset}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Процесор") ?
             <tr className='phone-offer-details-table-row'>
               <td>Процесор</td><td>{this.state.offer == null || 
               this.state.offer.cpu == null ? '/' : this.state.offer.cpu}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Батерија") ?
             <tr className='phone-offer-details-table-row'>
               <td>Батерија</td><td>{this.state.offer == null || 
               this.state.offer.battery == null ? '/' : this.state.offer.battery}</td>
             </tr> : <></>
             }
 
-            { !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
+            { this.state.showAllSpecs ||
+            !localStorage.getItem('pickedSpecifications') || localStorage.getItem('pickedSpecifications').includes("Боја") ?
             <tr className='phone-offer-details-table-row'>
               <td>Боја</td><td>{this.state.offer == null || 
               this.state.offer.color == null ? '/' : this.state.offer.color}</td>

@@ -130,4 +130,14 @@
     font-size: 19px;
 }
 
+.offerdetails-show-all-specs-icon:hover{
+    cursor: pointer;
+}
+
+.offerdetails-show-all-specs-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 

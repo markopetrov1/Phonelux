@@ -5,14 +5,14 @@
     border-radius: 20px;
     padding: 5px;
     margin-right: auto;
-    margin-left: 10px;
     height: fit-content;
     margin-top: 0px;
     padding-top: 5px;
-    width: 100%;
+    width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
+    word-break:break-all;
 }
 
 .popover-specification-container{
@@ -35,6 +35,41 @@
     transition: box-shadow 0.5s, background-color 0.5s ;
 }
 
+.specifications-filter-icon-header{
+   margin-top: -3px;
+}
+
 .specifications-filter-popover{
     text-align: center;
+}
+
+
+.pick-specifications-header{
+    background-color: #B6E2C8;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: 10px;
+    height: fit-content;
+    margin-top: 0px;
+    padding-top: 5px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    word-break:break-all;
+}
+
+.pick-specifications-header:hover{
+    cursor: pointer;
+    background-color: rgb(166, 201, 171);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+
+
+.specifications-filter-main{
+    width: 45%;
 }
