@@ -1,37 +1,24 @@
-
+import json
 import psycopg2
+import requests
 import config_read
-
 import sys
 
 file_path = 'outputfile.txt'
 sys.stdout = open(file_path, "w")
 
-# Call to read the configuration file and connect to database
-cinfo = config_read.get_databaseconfig("postgresdb.config")
-db_connection = psycopg2.connect(
-    database=cinfo[0],
-    host=cinfo[1],
-    user=cinfo[2],
-    password=cinfo[3]
-)
-cur = db_connection.cursor()
-
-cur.execute('SELECT id,model FROM phones ORDER BY id;')
-
-phones = cur.fetchall()
+phones = json.loads(requests.get('http://localhost:8080/phones').text)
 
 for phone in phones:
-    phone_id = str(phone[0])
-    print('id: '+phone_id)
-    cur.execute('SELECT offer_name,price FROM phone_offers WHERE phone_id=' + phone_id + ' ORDER BY price;')
-    details = cur.fetchone()
-    lowestPrice = None
+    phone_id = str(phone['id'])
+    print(phone['model'])
 
-    if details is not None:
-        lowestPrice = details[1]
-        cur.execute('UPDATE phones SET lowest_price='+str(lowestPrice)+' WHERE id='+phone_id+';')
-        db_connection.commit()
+    offers = list(json.loads(requests.get('http://localhost:8080/phones/offers/' + phone_id).text))
+    offers.sort(key=lambda o: o['price'])
+    lowest_price = str(0)
+    if len(offers) > 0:
+        lowest_price = str(offers[0]['price'])
+    print(lowest_price)
 
-cur.close()
-db_connection.close()
+    # UPDATE DATABASE WITH NEW LOWEST PRICE
+    requests.put('http://localhost:8080/setlowestprice/' + phone_id + '/' + lowest_price)

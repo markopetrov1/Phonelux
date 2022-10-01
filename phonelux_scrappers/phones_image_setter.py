@@ -1,45 +1,26 @@
-import unicodedata
-from datetime import datetime
-
-import psycopg2
-import config_read
-from bs4 import BeautifulSoup
+import json
 import requests
-
+import classes.phone
 import sys
+
 
 file_path = 'outputfile.txt'
 sys.stdout = open(file_path, "w")
 
-# Call to read the configuration file and connect to database
-cinfo = config_read.get_databaseconfig("postgresdb.config")
-db_connection = psycopg2.connect(
-    database=cinfo[0],
-    host=cinfo[1],
-    user=cinfo[2],
-    password=cinfo[3]
-)
-cur = db_connection.cursor()
-
-cur.execute('SELECT * FROM PHONES ORDER BY id')
-
-db_connection.commit()
-phones = cur.fetchall()
-
+phones = json.loads(requests.get('http://localhost:8080/phones').text)
 for phone in phones:
-    print(phone)
-    phone_id = phone[0]
-    cur.execute('SELECT phone_offers.image_url FROM phone_offers JOIN phones ON'
-                ' phone_offers.phone_id = phones.id WHERE '
-                'phones.id='+str(phone_id)+' AND phone_offers.image_url IS NOT NULL LIMIT 1')
-    tuple_image = cur.fetchone()
-    if tuple_image is not None:
-        print(tuple_image[0])
-        cur.execute('UPDATE phones SET image_url = \''+tuple_image[0]+'\' WHERE id='+str(phone_id));
-        db_connection.commit()
-    else:
-        print('None');
+    phone_id = str(phone['id'])
+    offers = list(json.loads(requests.get('http://localhost:8080/phones/offers/' + phone_id).text))
 
+    offers = list(filter(lambda offer: offer['image_url'] is not None, offers))
 
-cur.close()
-db_connection.close()
+    image_url = None
+
+    if len(offers) > 0:
+        image_url = offers[0]['image_url']
+
+    phone['image_url'] = image_url
+
+    # UPDATE DATABASE WITH NEW IMAGE URLS FOR PHONES
+    headers = {'Content-type': 'application/json'}
+    requests.put('http://localhost:8080/setimageurl/' + phone_id, headers=headers, data=phone['image_url'])

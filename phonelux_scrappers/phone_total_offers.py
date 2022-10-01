@@ -1,33 +1,22 @@
+import json
 
 import psycopg2
+import requests
 import config_read
 import sys
 
 file_path = 'outputfile.txt'
 sys.stdout = open(file_path, "w")
 
-# Call to read the configuration file and connect to database
-cinfo = config_read.get_databaseconfig("postgresdb.config")
-db_connection = psycopg2.connect(
-    database=cinfo[0],
-    host=cinfo[1],
-    user=cinfo[2],
-    password=cinfo[3]
-)
 
-cur = db_connection.cursor()
-
-cur.execute('SELECT id, model FROM phones;')
-phones = cur.fetchall()
+phones = json.loads(requests.get('http://localhost:8080/phones').text)
 
 for phone in phones:
-    cur.execute('SELECT COUNT(*) FROM phone_offers WHERE phone_id='+str(phone[0])+';')
 
-    total_offers = cur.fetchone()[0]
+    phone_id = str(phone['id'])
+    totaloffers = requests.get('http://localhost:8080/totaloffers/'+str.join('*', phone['model'].split(' '))).text
 
-    cur.execute('UPDATE phones SET total_offers='+str(total_offers)+' WHERE id='+str(phone[0])+';')
-    db_connection.commit()
+    print(phone_id+'  -  '+totaloffers)
 
-
-cur.close()
-db_connection.close()
+    # UPDATE DATABASE WITH NEW TOTAL OFFERS
+    requests.put('http://localhost:8080/settotaloffers/' + phone_id + '/' + totaloffers)
