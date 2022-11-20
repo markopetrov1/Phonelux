@@ -11,6 +11,9 @@ import StarsIcon from '@mui/icons-material/Stars';
 import UserContext from '../../context/UserContext';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import CompareIcon from '@mui/icons-material/Compare';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import ReportIcon from '@mui/icons-material/Report';
+import UpdateIcon from '@mui/icons-material/Update';
 
 export class NavbarComponent extends Component {
 
@@ -35,6 +38,22 @@ export class NavbarComponent extends Component {
           <Tippy placement='bottom' content='Менаџмент со корисници'>
             <Link style={{color: 'black'}} to={"/management/users"}>
               <SupervisorAccountIcon style={{fontSize: '40px', marginTop: '10px', marginRight: '10px' }} className='navbar-superadmin-icon'/>
+            </Link>
+          </Tippy> : <></>
+        }
+         {
+          localStorage.getItem('token') && this.context.role == 'SUPERADMIN' ? 
+          <Tippy placement='bottom' content='Преземање на содржина'>
+            <Link style={{color: 'black'}} to={"/scrapperinfo"}>
+              <UpdateIcon style={{fontSize: '40px', marginTop: '10px', marginRight: '10px' }} className='navbar-superadmin-icon'/>
+            </Link>
+          </Tippy> : <></>
+        }
+         {
+          localStorage.getItem('token') && (this.context.role == 'SUPERADMIN' || this.context.role == 'ADMIN') ? 
+          <Tippy placement='bottom' content='Пријавени понуди'>
+            <Link style={{color: 'black'}} to={"/offerreport/reports"}>
+              <BugReportIcon style={{fontSize: '40px', marginTop: '10px', marginRight: '10px' }} className='navbar-offerreports-icon'/>
             </Link>
           </Tippy> : <></>
         }

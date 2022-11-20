@@ -1,0 +1,82 @@
+.offerreports-section-header{
+    background-color: #B6E2C8;
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+.offerreports-section-header-text{
+    width: fit-content;
+}
+
+.offerreports-section-table-row:nth-of-type(even){
+    background-color: #eef2f0;
+}
+
+.offerreports-section-table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.offerreports-section-table-row{
+    border: 1px solid gainsboro;
+    padding: 20px ;
+    font-size: 18px;
+}
+
+.offerreports-section-table td{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.offerreports-section-table-head{
+    background-color: #a6c9ab;
+    font-size: 22px;
+}
+
+.offerreports-section-table-head th{
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.reportoffer-removeall-button{    
+    font-weight: bold;
+    font-size: 15px;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: rgb(243, 203, 203);
+}
+
+.reportoffer-removeall-button:hover{
+    cursor: pointer;
+    background-color: rgb(228, 179, 179);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.5s, background-color 0.5s ;
+}
+
+.no-offerreports-message{
+    text-align: center;
+    background-color: #a6c9ab;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+.no-offerreports-wrapper{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.offerreports-pagination-wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}

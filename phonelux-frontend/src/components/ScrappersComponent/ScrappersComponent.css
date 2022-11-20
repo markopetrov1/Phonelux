@@ -1,0 +1,52 @@
+.scrappers-section-header{
+    background-color: #B6E2C8;
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+.scrappers-section-header-text{
+    width: fit-content;
+}
+
+
+.scrappers-section-table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.scrappers-section-table-row{
+    border: 1px solid gainsboro;
+    padding: 20px ;
+    font-size: 18px;
+}
+
+.scrappers-section-table td{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.scrappers-section-table-head{
+    background-color: #a6c9ab;
+    font-size: 22px;
+}
+
+.scrappers-section-table-head th{
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.scrapper-info-failed{
+    color: red;
+}
+
+.scrapper-info-success{
+    color: #58ad7b;
+}
+
+.scrappers-section-table-row{
+    font-weight: bold;
+}

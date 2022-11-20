@@ -40,6 +40,8 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User with email "+email+" not found!"));
     }
 
+
+
     public ResponseEntity<Object> signUpUser(User user)
     {
        boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();

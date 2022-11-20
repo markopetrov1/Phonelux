@@ -1,9 +1,5 @@
 package finki.it.phoneluxbackend.services;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.io.JsonStringEncoder;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import finki.it.phoneluxbackend.data.RegistrationRequest;
 import finki.it.phoneluxbackend.data.UserRole;
 import finki.it.phoneluxbackend.entities.ConfirmationToken;
@@ -11,15 +7,12 @@ import finki.it.phoneluxbackend.entities.User;
 import finki.it.phoneluxbackend.security.email.EmailSender;
 import finki.it.phoneluxbackend.security.email.EmailValidator;
 import lombok.AllArgsConstructor;
-import org.apache.coyote.Response;
-import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
 
 @Service
 @AllArgsConstructor

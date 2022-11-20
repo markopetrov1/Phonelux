@@ -5,6 +5,7 @@ import "./LoginFormComponent.css"
 import InputFormComponent from './InputFormComponent';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import FacebookLogin from 'react-facebook-login'
 
 export class LoginFormComponent extends Component {
 
@@ -17,10 +18,7 @@ export class LoginFormComponent extends Component {
       serverResponse: ''
     }
   }
-  
-  changeHandler = (e) =>{
-      this.setState({[e.target.name] : e.target.value})
-  }
+
 
   submitHandler = (e) => {
       e.preventDefault()

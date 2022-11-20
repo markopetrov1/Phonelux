@@ -16,16 +16,6 @@ export class EditOfferComponent extends Component {
     }
 
     componentDidMount(){
-        // if(!localStorage.getItem('token'))
-        // {
-        //     window.location.href = "/"
-        // }
-
-        // if(this.context.role != 'ADMIN' && this.context.role != 'SUPERADMIN')
-        // {
-        //     window.location.href = "/"
-        // }
-
         var config = {
             method: 'get',
             url: '/phoneoffer/'+this.state.offerId,

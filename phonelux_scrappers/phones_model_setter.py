@@ -22,5 +22,4 @@ for offer in offers:
             requests.put('http://localhost:8080/phoneoffer/'+str(offer['id'])+'/addphonemodel/'+str(phone['id']))
             break
     if not flag:
-        # requests.delete('http://localhost:8080/phoneoffer/deleteoffer/' + str(offer['id']))
-        print('delete offer id '+str(offer['id']))
+        requests.delete('http://localhost:8080/phoneoffer/deleteoffer/' + str(offer['id']))

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Tippy from '@tippyjs/react'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import ReportIcon from '@mui/icons-material/Report';
 
 
 export class PhoneOfferDetailsComponent extends Component {
@@ -60,6 +61,25 @@ export class PhoneOfferDetailsComponent extends Component {
       })
   }
 
+    reportOffer = () =>{
+      alert('Пратена е пријава до администратор за невалидност на спецификациите на понудата!')
+      var config = {
+        method: 'post',
+        url: '/offerreport/'+this.state.offerId+'/'+this.context.userId,
+        headers: { 
+          'Authorization': 'Bearer '+localStorage.getItem('token')
+        }
+      };
+      
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+
   render() {
     console.log(this.state)
     return (
@@ -68,6 +88,12 @@ export class PhoneOfferDetailsComponent extends Component {
         <div className='phone-offer-details-last-updated-wrapper'>
           <h3 className='phone-offer-details-last-updated-header'>Последно ажурирана: {this.state.offer == null || 
           this.state.offer.last_updated == null ? '#' : this.state.offer.last_updated.split('T')[0]}</h3>
+          {
+            localStorage.getItem('token') ? 
+            <Tippy placement='bottom' content='Пријави понуда за неточни спецификации'>
+            <ReportIcon onClick={this.reportOffer} className='offerdetails-report-icon' style={{fontSize: '45px'}}/>
+         </Tippy> : <></>
+          }
           {
             localStorage.getItem('token') ? 
             this.state.showAllSpecs ? 
@@ -102,13 +128,16 @@ export class PhoneOfferDetailsComponent extends Component {
             }
 
           })()}
+
         </div>
         <div className='phone-offer-details-last-updated-wrapper'></div>
         <div className='phone-offer-details-table-wrapper'>
         <div className='phone-offer-details-table-section'>
         <table className='phone-offer-details-table'>
           <thead>
-          <tr><th colSpan={2}>Детали за понудата</th></tr>
+          <tr><th colSpan={2}>
+            Детали за понудата
+          </th></tr>
           </thead>
           <tbody>
             <tr className='phone-offer-details-table-row'>

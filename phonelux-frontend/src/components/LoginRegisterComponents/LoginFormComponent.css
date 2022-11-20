@@ -161,3 +161,16 @@
   border-radius: 50px;
   background-color: rgb(251, 224, 224);
  }
+
+ .login-with-facebook-image{
+  width: 40%;
+ }
+
+.login-with-facebook-image:hover{
+  cursor: pointer;
+}
+
+ .login-with-facebook-wrapper{
+  display: flex;
+  justify-content: center;
+ }

@@ -11,6 +11,8 @@ import SuperAdminComponent from "./components/SuperAdminComponent/SuperAdminComp
 import EditOfferComponent from "./components/EditOfferComponent/EditOfferComponent";
 import CompareOffersComponent from "./components/CompareOffersComponent/CompareOffersComponent";
 import SpecificationsFilterComponent from "./components/FiltersComponents/SpecificationsFilterComponent";
+import OfferReportsComponent from "./components/OfferReportsComponent/OfferReportsComponent";
+import ScrappersComponent from "./components/ScrappersComponent/ScrappersComponent";
 
 
 
@@ -28,6 +30,8 @@ function App() {
         <Route path="/management/users" element={<SuperAdminComponent/>}/>
         <Route path="/admin/editoffer/:offerId" element={<EditOfferComponent/>}/>
         <Route path="/compareoffers" element={<CompareOffersComponent/>}/>
+        <Route path="/offerreport/reports" element={<OfferReportsComponent/>}/>
+        <Route path="/scrapperinfo" element={<ScrappersComponent/>}/>
       </Routes>
     </BrowserRouter>
     </UserProvider>

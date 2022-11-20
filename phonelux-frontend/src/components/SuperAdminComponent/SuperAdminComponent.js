@@ -68,15 +68,6 @@ export class SuperAdminComponent extends Component {
     }
 
     componentDidMount(){
-      // if(!localStorage.getItem('token'))
-      // {
-      //     window.location.href = "/"
-      // }
-
-      // if(this.context.role != 'SUPERADMIN')
-      // {
-      //     window.location.href = "/"
-      // }
       this.getUsers()
     }
 

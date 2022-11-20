@@ -4,6 +4,7 @@ import finki.it.phoneluxbackend.security.CustomAuthenticationFilter;
 import finki.it.phoneluxbackend.security.CustomAuthorizationFilter;
 import finki.it.phoneluxbackend.services.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,8 +17,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static org.springframework.http.HttpMethod.GET;
-
 @Configuration
 @AllArgsConstructor
 @EnableWebSecurity
@@ -25,7 +24,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserService userService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -46,14 +44,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/admin/**")
                 .hasAnyAuthority("ADMIN","SUPERADMIN")
+                .and()
+                .authorizeRequests()
+                .antMatchers("/offerreport/**")
+                .hasAnyAuthority("USER", "ADMIN", "SUPERADMIN")
+                .and()
+                .authorizeRequests()
+                .antMatchers("/scrapperinfo/**")
+                .hasAnyAuthority("SUPERADMIN")
+                .and()
+                .authorizeRequests()
                 .anyRequest().permitAll();
-
 
 
         http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
 
     }
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
